@@ -55,6 +55,16 @@ composer require imagewize/marin
 
 The package type is `wordpress-theme`, so it needs `composer/installers` on the consuming site to land in `themes/` (Bedrock and Trellis already have it).
 
+## Demo content
+
+[imagewize/marin-demo-content](https://github.com/imagewize/marin-demo-content) is a WP-CLI seeder that fills a WooCommerce store with 16 skincare products (categories, variable products, sale prices and placeholder packshots), so you can see the templates and the `store` style variation with real data:
+
+```bash
+git clone https://github.com/imagewize/marin-demo-content.git
+cd marin-demo-content
+wp eval-file seed-skincare-products.php
+```
+
 ## Building a client store
 
 Marin is a GitHub [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). Press **Use this template → Create a new repository**, then run **Actions → Rename theme from template → Run workflow** in the new repo and merge the pull request it opens. It renames the `marin`/`Marin` identifiers (CSS prefixes, PHP function prefix, text domain, package names, logo filenames) to the new repository's name. If it cannot open a PR, enable **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**.
