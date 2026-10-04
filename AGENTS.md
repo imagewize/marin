@@ -1,10 +1,10 @@
 # Repository Guidelines
 
-Aviendha is a lean **Full Site Editing (FSE) starter theme** for WordPress (WP 6.6+, PHP 8.0+, no build
-tools — direct HTML block markup and PHP), designed to be forked and customized — similar to Sage in
-classic theming. `theme.json` is the single source of truth for colors, typography, spacing, and layout.
-Unlike Imagewize's Elayne theme, Aviendha ships **no bundled patterns** — content is composed directly
-from blocks (core blocks or the Aludra block library). It serves as the base for themes like Ixian.
+Marin is a lean **Full Site Editing (FSE) theme for WooCommerce stores** (WP 6.6+, PHP 8.0+, no build
+tools — direct HTML block markup and PHP), created from the Aviendha starter and meant to speed up
+client e-commerce builds. `theme.json` is the single source of truth for colors, typography, spacing,
+and layout. Marin ships **no bundled patterns** — content is composed directly from blocks (core
+blocks or the Aludra block library).
 
 ## Project Structure & Module Organization
 
@@ -18,9 +18,9 @@ from blocks (core blocks or the Aludra block library). It serves as the base for
 - Shared assets live under `assets/` (`logos/` for the rose mark, `css/` for the conditional
   WooCommerce stylesheet).
 - Reusable PHP lives in `functions.php` — keep it there, not scattered across templates.
-- Translations live in `languages/` (text domain: `aviendha`).
+- Translations live in `languages/` (text domain: `marin`).
 - **No `docs/` or `designs/` directory here.** Planning documents, roadmaps and HTML design mockups
-  live in the `imagewize/imagewize.com` repo under `docs/aviendha/` and `designs/aviendha/`, the
+  live in the `imagewize/imagewize.com` repo under `docs/marin/` and `designs/marin/`, the
   same per-project layout Aludra, Elayne and Nynaeve use. This repo is public and distributable, so
   mockups carrying client names and roadmaps of unshipped work do not belong in it, and a second
   copy of a design file only drifts from the first.
@@ -32,26 +32,26 @@ from blocks (core blocks or the Aludra block library). It serves as the base for
 
 ## Build, Test, and Development Commands
 
-- No JS build pipeline. Activate by placing the folder in `wp-content/themes/aviendha/` and
-  enabling it in WP Admin, or `wp theme activate aviendha`.
+- No JS build pipeline. Activate by placing the folder in `wp-content/themes/marin/` and
+  enabling it in WP Admin, or `wp theme activate marin`.
 - `composer install` then `composer run lint` / `composer run wpcs:scan` / `composer run wpcs:fix`.
 - Project-specific code review rules live in `.agents/code-review.md` — read that before reviewing
   a change here.
-- Regenerate translations when strings change: `wp i18n make-pot . languages/aviendha.pot`.
+- Regenerate translations when strings change: `wp i18n make-pot . languages/marin.pot`.
 - **Testing unreleased changes: sync, don't release.** The theme is a pinned Composer dependency
   on the local demo site (`~/code/imagewize.com/demo`, subsite
-  `http://demo.imagewize.test/aviendha/`), not a symlink.
+  `http://demo.imagewize.test/marin/`), not a symlink.
   
   Sync to the demo site by running this **from anywhere**, always passing the theme working copy
   as the explicit third (source) argument — do **not** `cd` into the demo site first:
   ```bash
   SITE_ROOT=/Users/j/code/imagewize.com/demo/web/app \
-    bash ~/code/wp-ops/scripts/rsync-package-to-site.sh theme aviendha /Users/j/code/aviendha
+    bash ~/code/wp-ops/scripts/rsync-package-to-site.sh theme marin /Users/j/code/marin
   ```
 
   **Critical — omitting that source argument wipes the theme.** The script defaults the source to
   `$PWD`, so running it from inside the demo site rsyncs the whole Bedrock site *into*
-  `themes/aviendha/` and, because the sync uses `--delete --delete-excluded`, deletes the real
+  `themes/marin/` and, because the sync uses `--delete --delete-excluded`, deletes the real
   theme. Preview with `--dry-run` (before the `theme` argument) when unsure; if it shows deletions
   of WordPress core (`web/wp/...`) or Bedrock files (`.env`, `config/`), the source is wrong — stop.
   `composer update` on that site restores the released version. See CLAUDE.md → *Testing on the
@@ -99,7 +99,7 @@ keep the two in step):
 site; the other three keep the repo, the WP.org listing and the release tooling honest. Check all
 four before tagging.
 
-**License:** Aviendha uses the GNU GPL v3 (or later) (see `LICENSE.md`), matching Aludra, Elayne and Ixian.
+**License:** Marin uses the GNU GPL v3 (or later) (see `LICENSE.md`), matching Aludra, Elayne and Ixian.
 
 ## Commit & Pull Request Guidelines
 
