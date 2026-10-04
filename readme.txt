@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, ed
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.3.1
+Stable tag: 1.4.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -37,6 +37,13 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.4.0 =
+* Changed: Store Home pattern redesigned, with a light hero and still-life image, illustrated category tiles, richer product cards, a routine section, a light story section, static testimonials and a terracotta closing call to action.
+* Changed: trust bar icons now match their labels.
+* Added: product illustrations and trust bar icons used by the pattern.
+* Added: hover motion for category tiles, product photos and buttons, switched off for visitors who prefer reduced motion.
+* Fixed: stray character in the Store Home pattern description.
 
 = 1.3.1 =
 * Changed: the mobile menu overlay is a full-screen menu with large left-aligned links and hairline dividers on the theme's base colour, instead of a small right-aligned list on white.

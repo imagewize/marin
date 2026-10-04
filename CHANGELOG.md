@@ -3,6 +3,33 @@
 All notable changes to Marin are documented in this file. Marin was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.4.0] - 2026-10-04
+
+### Changed
+- `patterns/home-store.php` (**Store Home**) redesigned from the new home mockup:
+  - Hero rebuilt from core blocks with a light background, large display type with an italic
+    terracotta accent, a still-life illustration and a Sale card, replacing `aludra/hero-split`.
+  - Category cards are now coloured tiles carrying a small product illustration.
+  - Bestsellers are ordered by popularity and each card shows its category, summary, price and an
+    Add to cart button, with square product images and padded text.
+  - New "Cleanse, treat, moisturise" routine section, with the stat rail moved beneath it.
+  - Story section rebuilt as a light image-and-text split, replacing `aludra/split-section`.
+  - Testimonials are a static three-card grid instead of the Slick carousel, which also removes
+    references to font and size slugs that the Skincare variation does not define.
+  - The closing call to action is a terracotta core-block band, replacing `aludra/cta-banner`.
+- Trust bar icons now match their labels (shipping, returns, gentle, secure checkout).
+
+### Added
+- `assets/illustrations/`: SVG product illustrations (hero, story, jar, serum, bottle, kit) used as
+  placeholders until real product photography replaces them.
+- `assets/icons/`: four trust bar icons (truck, returns, leaf, lock), since Aludra ships none.
+- `style.css` section 7, Motion: category tile illustrations lift on hover or focus, product photos
+  ease in, and buttons in page content darken slightly on hover. All of it is off under
+  `prefers-reduced-motion`.
+
+### Fixed
+- Stray ` *` in the Store Home pattern's Description header.
+
 ## [1.3.1] - 2026-10-04
 
 ### Changed
