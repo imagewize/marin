@@ -1,6 +1,6 @@
-# Code review rules — Aviendha
+# Code review rules — Marin
 
-Aviendha is a lean full-site-editing **starter theme**: no bundled patterns, no
+Marin is a lean full-site-editing **starter theme**: no bundled patterns, no
 JS build step, no runtime Composer or npm dependencies. `theme.json`, the
 templates in `templates/`, and the style variations in `styles/` are the
 product. These rules are read by the `code-review` skill
@@ -10,11 +10,11 @@ not required.
 
 ## Facts
 
-- Text domain: `aviendha`.
+- Text domain: `marin`.
 - No JS build step. `package.json` exists only for the `@imwz/wp-pattern-sentinel`
   pattern-validation harness (`npm run validate*`) — it is not a build, and the
   theme ships no bundled JavaScript or CSS.
-- **Aviendha ships no patterns itself** (see CLAUDE.md "Why no patterns"). A
+- **Marin ships no patterns itself** (see CLAUDE.md "Why no patterns"). A
   missing `patterns/` directory is the design, not a gap. Forks (e.g. Ixian)
   add their own; the validation harness in `package.json` exists for them.
 - `templates/page.html` deliberately **omits** `post-title` — most pages are
@@ -33,7 +33,7 @@ not required.
 - `.github/workflows/template-rename.yml`'s `paths-ignore` deliberately excludes
   `.github/**` (default `GITHUB_TOKEN` has no `workflow` scope) and
   `README.md`/`CHANGELOG.md`/`readme.txt`/`AGENTS.md`/`CLAUDE.md` (a fork keeps
-  Aviendha's lineage in these). Not a bug.
+  Marin's lineage in these). Not a bug.
 - `bin/sync-demo.sh` is intentionally gitignored, not missing — Theme Check's
   `File_Check` rejects a theme that ships a `.sh` file, so the demo-sync script
   lives in the separate `wp-ops` repo.
@@ -69,7 +69,7 @@ browser session; it is not part of this review and should not be simulated.
 ## Disable core rules
 
 - **Blocks** checklist section (block.json / build-output consistency,
-  `viewScript` enqueueing, etc.) — Aviendha ships no blocks of its own.
+  `viewScript` enqueueing, etc.) — Marin ships no blocks of its own.
 - **Theme → WordPress auto-registers `patterns/`** — only relevant once a fork
   adds a `patterns/` directory; its absence here is not a finding.
 
