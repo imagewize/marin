@@ -3,6 +3,16 @@
 All notable changes to Marin are documented in this file. Marin was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.0.4] - 2026-10-04
+
+### Changed
+- README: added an Installation section covering the release zip and `composer require
+  imagewize/marin` now that the theme is on Packagist, and corrected the Structure tree (removed the
+  non-existent `docs/`, added `assets/fonts/`, the dark-header template and the order-confirmation
+  template).
+- `CLAUDE.md` and `AGENTS.md`: the template-parts and WooCommerce-template notes now list what
+  `parts/` and `templates/` actually contain.
+
 ## [1.0.3] - 2026-10-04
 
 ### Fixed
