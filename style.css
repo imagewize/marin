@@ -7,7 +7,7 @@ Description: Marin is a lean full-site-editing theme for WooCommerce stores. It 
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Version: 1.3.1
+Version: 1.4.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: marin
@@ -44,6 +44,7 @@ Marin is distributed under the terms of the GNU GPL v3 (or later).
  *    6.6 Related posts
  *    6.7 Comments
  *    6.8 Reading-progress bar
+ * 7. Motion
  */
 
 /* -------------------------------------------------------------------------
@@ -1056,5 +1057,58 @@ body .marin-header--dark .wp-block-site-logo {
 @keyframes marin-read-progress {
 	to {
 		transform: scaleX(1);
+	}
+}
+
+/* -------------------------------------------------------------------------
+ * 7. Motion
+ * ------------------------------------------------------------------------- */
+
+/*
+ * Store home: the illustration in a category tile lifts when the tile is
+ * hovered or focused, and a product card photo eases in. Buttons in the page
+ * content darken slightly on hover. All of it is switched off for visitors
+ * who ask for reduced motion.
+ */
+.marin-art {
+	transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.marin-tile:hover .marin-art,
+.marin-tile:focus-within .marin-art {
+	transform: translateY(-8px);
+}
+
+.wp-block-woocommerce-product-template .wc-block-components-product-image {
+	overflow: hidden;
+}
+
+.wp-block-woocommerce-product-template .wc-block-components-product-image img {
+	transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.wp-block-woocommerce-product-template .wc-block-product:hover .wc-block-components-product-image img {
+	transform: scale(1.04);
+}
+
+main .wp-block-button__link {
+	transition: filter 0.2s;
+}
+
+main .wp-block-button__link:hover {
+	filter: brightness(0.92);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.marin-art,
+	.wp-block-woocommerce-product-template .wc-block-components-product-image img,
+	main .wp-block-button__link {
+		transition: none;
+	}
+
+	.marin-tile:hover .marin-art,
+	.marin-tile:focus-within .marin-art,
+	.wp-block-woocommerce-product-template .wc-block-product:hover .wc-block-components-product-image img {
+		transform: none;
 	}
 }
