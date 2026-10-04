@@ -22,7 +22,7 @@ A lean full-site-editing WooCommerce theme for client e-commerce stores.
 
 ## Description
 
-Marin is a full-site-editing (FSE) WordPress theme for **e-commerce**, built to speed up client store builds. It provides a design system via `theme.json` (colors, typography, spacing, layout), WooCommerce block templates, and style variations (including `store`), but ships **no bundled patterns** — pages are composed directly from blocks. Fork it per client, or use it as the shared base.
+Marin is a full-site-editing (FSE) WordPress theme for **e-commerce**, built to speed up client store builds. It provides a design system via `theme.json` (colors, typography, spacing, layout), WooCommerce block templates, and style variations (including `store`), and a single **Store Home** page pattern, but no pattern library — other pages are composed directly from blocks. Fork it per client, or use it as the shared base.
 
 It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu, carousel, FAQ tabs, store bands, and more), but doesn't require it — the theme is a plain block theme that works with core blocks and any block plugin.
 
@@ -33,17 +33,17 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 - WordPress 6.6+
 - PHP 8.0+
 - WooCommerce (the point of the theme; templates degrade gracefully without it)
-- Aludra plugin (recommended, not required)
+- Aludra plugin (recommended, not required; the Store Home pattern needs it)
 
 ## Features
 
-- **Store-first block theme** — built for WooCommerce client stores; fork it per client (it is a template repository) or use it as the shared base, with no opinionated patterns that would need removal
+- **Store-first block theme** — built for WooCommerce client stores; fork it per client (it is a template repository) or use it as the shared base, with no pattern library that would need removal
 - **Design system** — `theme.json` defines the color palette, typography, spacing, and border radii; color/spacing slugs match what Aludra's own block styles expect (`base`, `contrast`, `secondary`, `main`, `primary`, `accent`, `tertiary`, `border-light`)
 - **WooCommerce templates** — `templates/single-product.html`, `templates/archive-product.html`, `templates/product-search-results.html`, and `templates/coming-soon.html` are theme-provided; cart, checkout, and category-archive templates fall back to WooCommerce's own block-theme defaults. The product archive and search results ship a results count, catalog sorting, a filters sidebar (price, category, availability, rating) and an empty state; the single product template uses the block-based add to cart, with theme layouts for simple and variable products in `parts/`. The coming-soon template wraps WooCommerce's coming-soon block with the theme's header and footer.
 - **Degrades gracefully without WooCommerce** — with the plugin inactive, the store templates and the header's mini cart are filtered out rather than left to render as unsupported blocks. WooCommerce's own bundled `woocommerce-blocks/*` patterns are unregistered when it *is* active — the theme neither designed nor styles them, and they crowd out core's.
 - **Two page templates** — `page.html` (default) omits `post-title` since most pages get their title from a block's own heading; `page-with-title.html` (selectable per-page under Page → Template) adds the conventional title treatment.
 - **Style variations** — see `styles/` (`twilight.json` — dark, rose-accented; `store.json` — warm retail palette with self-hosted Cormorant Garamond and Jost) for alternate palettes on top of the same design system.
-- **No bundled patterns** — block-first composition. Core's own patterns stay registered, so the inserter is never empty; insert `aludra/*` blocks (or core blocks) directly into pages and templates, then add your own patterns as needed.
+- **One page pattern, no library** — `marin/home-store` (**Store Home**) is a front page built from Aludra blocks and a WooCommerce product grid: hero, trust bar, category cards, newest products, story, stats, reviews and a closing call to action. It is registered only when WooCommerce is active **and** the Aludra plugin is installed — without Aludra it is hidden rather than inserting unsupported blocks. Everything else is block-first composition: core's own patterns stay registered, so the inserter is never empty; insert `aludra/*` blocks (or core blocks) directly into pages and templates, then add your own patterns as needed.
 
 ## Installation
 
@@ -65,6 +65,8 @@ cd marin-demo-content
 wp eval-file seed-skincare-products.php
 ```
 
+For the front page, install the [Aludra](https://github.com/imagewize/aludra) plugin (`composer require imagewize/aludra`), edit your Home page, insert the **Store Home** pattern (Patterns → Featured) and set the page as your static front page under **Settings → Reading**.
+
 ## Building a client store
 
 Marin is a GitHub [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). Press **Use this template → Create a new repository**, then run **Actions → Rename theme from template → Run workflow** in the new repo and merge the pull request it opens. It renames the `marin`/`Marin` identifiers (CSS prefixes, PHP function prefix, text domain, package names, logo filenames) to the new repository's name. If it cannot open a PR, enable **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**.
@@ -74,7 +76,7 @@ The rename skips this README, `CHANGELOG.md`, `readme.txt` and the agent guides.
 - Rewrite those files, reset the version to `1.0.0`, and repoint their `assets/logos/marin-winespring-*.svg` references
 - Update the `style.css` header, `screenshot.png` and the logo mark
 - Give the theme its own palette in `theme.json` or a `styles/*.json` variation (start from `store.json`)
-- Add a `patterns/` directory if needed — the `@imwz/wp-pattern-sentinel` harness is already wired up
+- Rewrite or remove `patterns/home-store.php` (skincare copy), and add more patterns in `patterns/` if needed — the `@imwz/wp-pattern-sentinel` harness is already wired up
 
 ## Structure
 
@@ -84,6 +86,7 @@ marin/
 ├── theme.json          # Design system: color, typography, spacing, layout
 ├── functions.php       # Theme setup, 'menu' template part area, WooCommerce hooks
 ├── templates/          # FSE templates (index, home, single, page, page-with-title, page-dark-header, archive, search, 404; WooCommerce: single-product, archive-product, product-search-results, order-confirmation, coming-soon)
+├── patterns/            # Store Home page pattern (needs Aludra + WooCommerce)
 ├── parts/               # header, header-dark, footer, and simple/variable product add-to-cart layouts
 ├── styles/              # Style variations (store, twilight)
 ├── assets/
