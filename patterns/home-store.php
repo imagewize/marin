@@ -59,9 +59,9 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <p class="has-accent-color has-text-color has-xx-small-font-size" style="letter-spacing:0.16em;text-transform:uppercase">Sale</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"textColor":"contrast","fontSize":"large","fontFamily":"display"} -->
-<p class="has-contrast-color has-text-color has-link-color has-display-font-family has-large-font-size" style="font-weight:600"><a href="<?php echo esc_url( $kit_url ); ?>">The Essentials Kit</a></p>
-<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontSize":"1.375rem","fontWeight":"600","lineHeight":"1.2"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"},"typography":{"textDecoration":"none"}}}},"textColor":"contrast"} -->
+<h4 class="wp-block-heading has-contrast-color has-text-color has-link-color" style="margin-top:0;margin-bottom:0;font-size:1.375rem;font-weight:600;line-height:1.2"><a href="<?php echo esc_url( $kit_url ); ?>">The Essentials Kit</a></h4>
+<!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
 <p class="has-small-font-size"><strong>$68.00</strong> <s>$79.00</s></p>
