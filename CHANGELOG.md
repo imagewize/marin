@@ -3,6 +3,15 @@
 All notable changes to Marin are documented in this file. Marin was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.3.1] - 2026-10-04
+
+### Changed
+- Mobile menu overlay (both headers): the open menu is now laid out as a full-screen menu — a
+  left-aligned, full-width list of large display-face links separated by hairlines — instead of
+  core's shrink-wrapped, right-anchored list of body-size links. Its background is the theme's
+  `base` colour rather than core's `#fff`, and the overlay is inset on all four sides so the close
+  button and the list share the same margins. The inline desktop menu is unchanged.
+
 ## [1.3.0] - 2026-10-04
 
 ### Added
