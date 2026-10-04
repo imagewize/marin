@@ -7,7 +7,7 @@ Description: Marin is a lean full-site-editing theme for WooCommerce stores. It 
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Version: 1.0.4
+Version: 1.1.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: marin
@@ -27,7 +27,7 @@ Marin is distributed under the terms of the GNU GPL v3 (or later).
  *    2.1 Sticky masthead
  *    2.2 Scroll edge (light header)
  *    2.3 Wordmark and logo
- *    2.4 CTA button
+ *    2.4 Header search
  *    2.5 Navigation underline
  *    2.6 Overlay navigation
  *    2.7 Account icon
@@ -219,40 +219,39 @@ body .marin-header--dark .wp-block-site-logo {
 	display: none;
 }
 
-/* 2.4 CTA button
+/* 2.4 Header search
  * ------------------------------------------------------------------------- */
 
 /*
- * Shape and type are shared; colour is not. The light header uses the filled
- * `primary` button straight from theme.json (`styles.elements.button`), so it
- * needs no colour rules here at all — including hover, which theme.json already
- * takes to `primary-alt`. Only the dark header's outline treatment is below.
+ * Icon-only product search (core/search, `post_type=product`). It opens inline
+ * when focused, so the resting header stays as tidy as the account and cart
+ * icons next to it. Colour follows the header's text colour in both variants.
  */
-.marin-header__cta .wp-block-button__link {
-	font-family: var(--wp--preset--font-family--mono);
-	font-size: var(--wp--preset--font-size--x-small);
-	font-weight: 600;
-	letter-spacing: 0.04em;
-	padding: 0.5rem 0.9rem;
-	border-radius: 999px;
-	white-space: nowrap;
-	transition: background-color 0.18s, border-color 0.18s, color 0.18s;
+.marin-header .wp-block-search .wp-block-search__button.wp-element-button {
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	color: inherit;
+	padding: 0.25rem;
 }
 
-/*
- * Drop the CTA below 600px, where the wordmark, the hamburger and the two icons
- * leave less than the button's ~150px and it runs off the right edge. Above that
- * it always has room — §2.7 keeps the navigation collapsed until 1024px, and by
- * the time the menu goes inline the row is wide enough for both.
- *
- * The `.wp-block-buttons >` part is load-bearing, not decoration: core emits
- * `.wp-block-buttons > .wp-block-button { display: inline-block }`, and a lone
- * class selector here loses to it and leaves the button visible.
- */
-@media (max-width: 599px) {
-	.marin-header .wp-block-buttons > .marin-header__cta {
-		display: none;
-	}
+.marin-header .wp-block-search .wp-block-search__button.wp-element-button:hover {
+	background: transparent;
+	color: inherit;
+	opacity: 0.7;
+}
+
+.marin-header .wp-block-search {
+	margin: 0;
+}
+
+.marin-header .wp-block-search__inside-wrapper {
+	align-items: center;
+}
+
+.marin-header .wp-block-search__button svg {
+	fill: currentColor;
 }
 
 /* 2.5 Navigation underline
@@ -298,31 +297,18 @@ body .marin-header--dark .wp-block-site-logo {
 	content: none;
 }
 
-.marin-header--dark .marin-header__cta .wp-block-button__link {
-	border-color: rgb(250 247 242 / 0.3);
-}
-
-.marin-header--dark .marin-header__cta .wp-block-button__link:hover {
-	background-color: var(--wp--preset--color--base);
-	/* !important needed: the saved button markup carries has-base-color,
-	 * and core emits `.has-base-color { color: ... !important }` — a plain
-	 * override here loses to that, leaving white text on the white hover
-	 * background. */
-	color: var(--wp--preset--color--main) !important;
-	border-color: var(--wp--preset--color--base);
-}
-
 /* 2.6 Actions cluster order
  * ------------------------------------------------------------------------- */
 
 /*
  * `.marin-header__actions` (parts/header.html, parts/header-dark.html)
- * holds the icon/CTA group and the navigation block in that source order, so
- * the hamburger renders last — rightmost, with the CTA immediately before
- * it — which is what a collapsed header (below 1024px, see §2.7) wants.
+ * holds the icon group (search, account, cart) and the navigation block in that
+ * source order, so the hamburger renders last — rightmost, with the icons
+ * immediately before it — which is what a collapsed header (below 1024px, see
+ * §2.7) wants.
  *
  * Once the navigation goes inline at 1024px+, that same order would put the
- * link row after the icons and CTA, which reads backwards for a desktop
+ * link row after the icons, which reads backwards for a desktop
  * masthead — so only there, pull it back in front with `order`.
  */
 @media (min-width: 1024px) {
@@ -342,7 +328,7 @@ body .marin-header--dark .wp-block-site-logo {
  * inside `@media (min-width: 600px)`: one flips `.wp-block-navigation__responsive-container`
  * from the hidden fixed-position overlay to an inline block, the other hides the
  * hamburger. Between 600px and 1024px that left the inline menu competing with
- * the wordmark, the cart and account icons and the CTA, and the row wrapped — a
+ * the wordmark and the search, cart and account icons, and the row wrapped — a
  * 105px-tall masthead on a tablet.
  *
  * Restoring those two declarations to their base values across the band is the
@@ -350,7 +336,7 @@ body .marin-header--dark .wp-block-site-logo {
  * it needs when open, already lives outside the media query.
  *
  * 1024px rather than a rounder 960px because the masthead's own contents decide
- * it: this menu's six items plus the wordmark, icons and CTA measure 973px, so
+ * it: this menu's six items plus the wordmark and icons measured 973px, so
  * at 960px the row still wrapped. A longer menu would want this raised again.
  */
 @media (min-width: 600px) and (max-width: 1023px) {
@@ -875,7 +861,7 @@ body .marin-header--dark .wp-block-site-logo {
 /*
  * Sidebar CTA button: base on main, inverting the theme.json primary button.
  * The named-colour classes core emits carry `!important`, so the hover has to
- * as well to win — same idiom the dark header's CTA hover uses (§2.5).
+ * as well to win — same idiom core's colour utility classes need.
  */
 .single .marin-aside-cta .wp-block-button__link:hover {
 	background-color: var(--wp--preset--color--white) !important;
