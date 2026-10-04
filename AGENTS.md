@@ -3,8 +3,10 @@
 Marin is a lean **Full Site Editing (FSE) theme for WooCommerce stores** (WP 6.6+, PHP 8.0+, no build
 tools — direct HTML block markup and PHP), created from the Aviendha starter and meant to speed up
 client e-commerce builds. `theme.json` is the single source of truth for colors, typography, spacing,
-and layout. Marin ships **no bundled patterns** — content is composed directly from blocks (core
-blocks or the Aludra block library).
+and layout. Marin ships **no pattern library** — content is composed directly from blocks (core
+blocks or the Aludra block library). The one exception is `patterns/home-store.php`
+(`marin/home-store`), a store front page built from Aludra blocks, registered only when Aludra and
+WooCommerce are active.
 
 ## Project Structure & Module Organization
 

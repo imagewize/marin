@@ -1,6 +1,7 @@
 # Code review rules — Marin
 
-Marin is a lean full-site-editing **WooCommerce theme** for client stores: no bundled patterns, no
+Marin is a lean full-site-editing **WooCommerce theme** for client stores: one page pattern and no
+pattern library, no
 JS build step, no runtime Composer or npm dependencies. `theme.json`, the
 templates in `templates/`, and the style variations in `styles/` are the
 product. These rules are read by the `code-review` skill
@@ -14,9 +15,11 @@ not required.
 - No JS build step. `package.json` exists only for the `@imwz/wp-pattern-sentinel`
   pattern-validation harness (`npm run validate*`) — it is not a build, and the
   theme ships no bundled JavaScript or CSS.
-- **Marin ships no patterns itself** (see CLAUDE.md "Why no patterns"). A
-  missing `patterns/` directory is the design, not a gap. Forks (e.g. Ixian)
-  add their own; the validation harness in `package.json` exists for them.
+- **Marin ships one pattern, `marin/home-store`** (see CLAUDE.md "Why (almost)
+  no patterns"). A small `patterns/` directory is the design; a growing library
+  is not. The pattern must stay unregistered unless WooCommerce and Aludra's
+  blocks are present. Forks (e.g. Ixian) add their own; the validation harness
+  in `package.json` covers all of them.
 - `templates/page.html` deliberately **omits** `post-title` — most pages are
   composed from blocks (often Aludra blocks) whose own heading serves as the
   title. `templates/page-with-title.html` is the variant that includes it.

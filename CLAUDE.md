@@ -26,10 +26,17 @@ checkout was added here because the rename action's push otherwise fails with a 
 `Authorization` header). Aviendha stays the neutral starter; improvements that are not store-specific
 (theme.json fixes, template bugs, grid rules) belong upstream there too — port them by hand.
 
-**Why no patterns:** reusable logic lives in Aludra's `aludra/*` blocks, which keeps this theme's
-surface area small. Prefer a **style variation** (`styles/*.json`) over a pattern library for new
-looks. The pattern-validation harness (`@imwz/wp-pattern-sentinel`, `npm run validate`) is wired up
-for any `patterns/` directory a client fork adds — see [Pattern validation](#pattern-validation).
+**Why (almost) no patterns:** reusable logic lives in Aludra's `aludra/*` blocks, which keeps this
+theme's surface area small. Prefer a **style variation** (`styles/*.json`) over a pattern library for
+new looks. The single exception is `patterns/home-store.php` (`marin/home-store`): a store front page
+built from Aludra blocks and a WooCommerce product grid, with skincare copy and links resolved at
+render time (shop page, `product_cat` slugs). It is registered only when WooCommerce is active and
+Aludra's blocks are registered (`marin_maybe_unregister_store_home_pattern()` in `functions.php`),
+since pattern files otherwise register themselves and would insert unsupported blocks. Its colour
+panels are Aludra's own "replace with a photo" placeholders, so it works without any images. Add new
+vertical-specific page patterns on a branch, not as a growing library. The pattern-validation
+harness (`@imwz/wp-pattern-sentinel`, `npm run validate`) covers it — see
+[Pattern validation](#pattern-validation).
 
 The workflow's `paths-ignore` skips `.github/**`, README/CHANGELOG/readme.txt/agent guides,
 `composer.lock`, `vendor/**` and PNGs. The rename moves `assets/logos/marin-winespring-*.svg` but not the
@@ -82,7 +89,7 @@ The Aludra mega-menu block requires its host theme to register a `menu` template
 template parts (created by users in the Site Editor) appear under
 **Appearance → Editor → Patterns → Template Parts → Menus**. Content for those template parts lives
 in the database, not in this theme — Marin ships no menu template part files, matching the
-"no patterns" rule above.
+"almost no patterns" rule above.
 
 ### Style variations (`styles/`)
 
@@ -109,8 +116,8 @@ Project-specific code review rules (for the `/code-review` skill or Vibe) live i
 
 ### Pattern validation
 
-Marin ships no patterns itself (see "Why no patterns" above), but carries the
-`@imwz/wp-pattern-sentinel` harness in `package.json` for forks that add a `patterns/` directory.
+Marin ships one pattern (see "Why (almost) no patterns" above) and carries the
+`@imwz/wp-pattern-sentinel` harness in `package.json` for it and for forks that add a `patterns/` directory.
 `wp pattern validate`'s PHP `parse_blocks()` pass does **not** run Gutenberg's JavaScript `save()`
 function — issues only the JS serializer produces (class-ordering, attribute defaults like a
 block's own `align`, auto-injected styles) pass that check but still fail block validation in the

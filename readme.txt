@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, ed
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,8 +12,8 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Marin is a lean full-site-editing (FSE) theme for WooCommerce stores, built to speed up client
 e-commerce builds. It provides a design system via `theme.json` (colors, typography, spacing,
-layout), WooCommerce block templates, and style variations, but ships no bundled patterns —
-page content is composed directly from blocks. Marin is created from the Aviendha starter theme.
+layout), WooCommerce block templates, and style variations. It ships a single page pattern, a store
+front page built from Aludra blocks; other page content is composed directly from blocks. Marin is created from the Aviendha starter theme.
 
 Marin pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu,
 carousel, FAQ tabs, and more), but doesn't require it — the theme is a plain block theme that
@@ -25,7 +25,7 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 * Solid design system via `theme.json` (colors, typography, spacing, layout)
 * WooCommerce block templates for single product and product archive
 * Style variations: Twilight (dark) and Store (warm retail palette, self-hosted fonts)
-* No bundled patterns — block-first composition
+* One page pattern (Store Home, needs Aludra and WooCommerce) — otherwise block-first composition
 * Pairs with the Aludra block library (mega menu, carousel, FAQ tabs, and more)
 * Translation-ready
 
@@ -37,6 +37,10 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.2.0 =
+* Added: Store Home page pattern, a front page built from Aludra blocks and a WooCommerce product grid. It is hidden unless WooCommerce is active and the Aludra plugin is installed.
+* Changed: documentation now describes the single page pattern.
 
 = 1.1.0 =
 * Added: header product search, an icon-only search limited to products, in both header parts.
