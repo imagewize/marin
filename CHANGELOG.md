@@ -3,6 +3,13 @@
 All notable changes to Marin are documented in this file. Marin was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.0.1] - 2026-10-04
+
+### Changed
+- **Winespring logo mark** (`assets/logos/marin-winespring-primary.svg`): a grape cluster for the
+  Winespring Inn replaces the inherited Aviendha rose. A lighter `marin-winespring-dark.svg` variant
+  serves the README in dark mode via `<picture>`. Material Design Icons credited in readme.txt.
+
 ## [1.0.0] - 2026-10-04
 
 ### Added

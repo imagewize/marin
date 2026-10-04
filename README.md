@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="assets/logos/marin-rose-primary.svg" alt="Marin Logo" width="128" height="128">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logos/marin-winespring-dark.svg">
+    <img src="assets/logos/marin-winespring-primary.svg" alt="Marin Logo" width="128" height="128">
+  </picture>
 </p>
 <div align="center">
 <h1>Marin</h1>
@@ -48,7 +51,7 @@ Marin is a GitHub [template repository](https://docs.github.com/en/repositories/
 
 The rename skips this README, `CHANGELOG.md`, `readme.txt` and the agent guides. Finish by hand:
 
-- Rewrite those files, reset the version to `1.0.0`, and repoint their `assets/logos/marin-rose-*.svg` references
+- Rewrite those files, reset the version to `1.0.0`, and repoint their `assets/logos/marin-winespring-*.svg` references
 - Update the `style.css` header, `screenshot.png` and the logo mark
 - Give the theme its own palette in `theme.json` or a `styles/*.json` variation (start from `store.json`)
 - Add a `patterns/` directory if needed — the `@imwz/wp-pattern-sentinel` harness is already wired up
@@ -64,7 +67,7 @@ marin/
 ├── parts/               # header.html, header-dark.html, footer.html, add-to-cart layouts
 ├── styles/              # Style variations
 ├── assets/
-│   ├── logos/           # Rose logo mark (SVG)
+│   ├── logos/           # Winespring logo mark (SVG)
 │   └── css/             # WooCommerce override stylesheet (enqueued conditionally)
 ├── docs/                # Contributor notes (not shipped in the theme zip)
 └── languages/           # Translations (text domain: marin)

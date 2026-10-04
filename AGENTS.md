@@ -15,7 +15,7 @@ blocks or the Aludra block library).
   heading; use `page-with-title.html` (selectable per-page under Page → Template) for pages that
   want the conventional title treatment.
 - Style variations live in `styles/` (e.g. `twilight.json`).
-- Shared assets live under `assets/` (`logos/` for the rose mark, `css/` for the conditional
+- Shared assets live under `assets/` (`logos/` for the Winespring grape mark, `css/` for the conditional
   WooCommerce stylesheet).
 - Reusable PHP lives in `functions.php` — keep it there, not scattered across templates.
 - Translations live in `languages/` (text domain: `marin`).

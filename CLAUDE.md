@@ -32,7 +32,7 @@ looks. The pattern-validation harness (`@imwz/wp-pattern-sentinel`, `npm run val
 for any `patterns/` directory a client fork adds — see [Pattern validation](#pattern-validation).
 
 The workflow's `paths-ignore` skips `.github/**`, README/CHANGELOG/readme.txt/agent guides,
-`composer.lock`, `vendor/**` and PNGs. The rename moves `assets/logos/marin-rose-*.svg` but not the
+`composer.lock`, `vendor/**` and PNGs. The rename moves `assets/logos/marin-winespring-*.svg` but not the
 references to them in the skipped files; forks of Marin must repoint those by hand.
 
 ## Architecture
@@ -247,6 +247,6 @@ one large commit bundling unrelated changes. Makes history easier to review and 
 - `templates/*.html` — FSE templates, including WooCommerce single-product/archive-product
 - `parts/header.html`, `parts/footer.html` — template parts
 - `styles/*.json` — style variations
-- `assets/logos/` — rose logo mark (SVG, adapted from Lucide, ISC License)
+- `assets/logos/` — Winespring logo mark (light and dark variants for the README `<picture>`) — grape cluster for the Winespring Inn (SVG, Material Design Icons `fruit-grapes` via Blade Icons, Apache 2.0)
 - `composer.json` / `phpcs.xml` — PHP lint/coding-standards tooling
 - `.github/workflows/template-rename.yml` — the fork rename (see [Forking Marin](#forking-marin))
