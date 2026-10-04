@@ -348,31 +348,43 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:aludra/stat-item --></div></div>
 <!-- /wp:aludra/stat-rail -->
 
-<!-- wp:aludra/split-section {"revealOnScroll":true} -->
-<div class="wp-block-aludra-split-section alignfull" data-aludra-reveal="true" style="margin-top:0;margin-bottom:0"><div class="split-section__shell"><div class="split-section__header"><p class="split-section__label">Our story</p><h2 class="split-section__heading">Made <em>simple</em></h2><p class="split-section__lead">Every formula starts with a question: what does skin actually need?</p></div><div class="split-section__panes"><!-- wp:group {"className":"split-section__media"} -->
-<div class="wp-block-group split-section__media"><!-- wp:cover {"overlayColor":"primary","isUserOverlayColor":true,"minHeight":420,"minHeightUnit":"px","contentPosition":"bottom left","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="border-radius:12px;padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px;min-height:420px"><span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Small batches, made with care</p>
-<!-- /wp:paragraph --></div></div>
-<!-- /wp:cover --></div>
-<!-- /wp:group -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"96px","bottom":"96px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
+<div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:96px;padding-right:24px;padding-bottom:96px;padding-left:24px"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"48px","left":"64px"}}}} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"20px"}}} -->
+<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/story.svg' ) ); ?>" alt="" style="border-radius:20px"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column -->
 
-<!-- wp:group {"className":"split-section__content","style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"},"blockGap":"1.25rem"},"border":{"radius":"12px"}},"textColor":"secondary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group split-section__content has-secondary-color has-text-color" style="border-radius:12px;padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem"><!-- wp:paragraph -->
-<p>We started with a short list: ingredients we can explain, formulas that are gentle enough for daily use, and nothing in the box you would not keep.</p>
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.16em","fontWeight":"500"},"spacing":{"margin":{"bottom":"14px"}}},"textColor":"primary","fontSize":"small"} -->
+<p class="has-primary-color has-text-color has-small-font-size" style="margin-bottom:14px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase">Our story</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph -->
-<p>Today the range is larger, but the rule is the same. If we would not use it ourselves, it does not ship.</p>
+<!-- wp:heading {"textColor":"contrast","fontSize":"xx-large"} -->
+<h2 class="wp-block-heading has-contrast-color has-text-color has-xx-large-font-size">Made <em><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-color">simple</mark></em></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","lineHeight":"1.3"},"spacing":{"margin":{"top":"20px"}}},"textColor":"primary-alt","fontSize":"large","fontFamily":"display"} -->
+<p class="has-primary-alt-color has-text-color has-display-font-family has-large-font-size" style="margin-top:20px;font-style:italic;line-height:1.3">Every formula starts with a question: what does skin actually need?</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button -->
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"24px"}}},"textColor":"secondary"} -->
+<p class="has-secondary-color has-text-color" style="margin-top:24px">We started with a short list: ingredients we can explain, formulas that are gentle enough for daily use, and nothing in the box you would not keep.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"16px"}}},"textColor":"secondary"} -->
+<p class="has-secondary-color has-text-color" style="margin-top:16px">Today the range is larger, but the rule is the same. If we would not use it ourselves, it does not ship.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"32px"}}}} -->
+<div class="wp-block-buttons" style="margin-top:32px"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $shop_url ); ?>">Shop the range</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
-<!-- /wp:group --></div></div></div>
-<!-- /wp:aludra/split-section -->
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"48px"}},"backgroundColor":"tertiary","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"textColor":"contrast","fontSize":"xx-large"} -->
