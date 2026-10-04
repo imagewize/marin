@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, ed
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -37,6 +37,9 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.3.1 =
+* Changed: the mobile menu overlay is a full-screen menu with large left-aligned links and hairline dividers on the theme's base colour, instead of a small right-aligned list on white.
 
 = 1.3.0 =
 * Added: Skincare style variation, a calm sage and cream palette that reuses the Store variation's fonts.
