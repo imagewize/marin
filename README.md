@@ -45,6 +45,16 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 - **Style variations** — see `styles/` (`twilight.json` — dark, rose-accented; `store.json` — warm retail palette with self-hosted Cormorant Garamond and Jost) for alternate palettes on top of the same design system.
 - **No bundled patterns** — block-first composition. Core's own patterns stay registered, so the inserter is never empty; insert `aludra/*` blocks (or core blocks) directly into pages and templates, then add your own patterns as needed.
 
+## Installation
+
+Download the release zip from [GitHub](https://github.com/imagewize/marin/releases) and upload it under **Appearance → Themes → Add New**, or install it with Composer from [Packagist](https://packagist.org/packages/imagewize/marin):
+
+```bash
+composer require imagewize/marin
+```
+
+The package type is `wordpress-theme`, so it needs `composer/installers` on the consuming site to land in `themes/` (Bedrock and Trellis already have it).
+
 ## Building a client store
 
 Marin is a GitHub [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). Press **Use this template → Create a new repository**, then run **Actions → Rename theme from template → Run workflow** in the new repo and merge the pull request it opens. It renames the `marin`/`Marin` identifiers (CSS prefixes, PHP function prefix, text domain, package names, logo filenames) to the new repository's name. If it cannot open a PR, enable **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**.
@@ -63,13 +73,13 @@ marin/
 ├── style.css          # Theme header (metadata only)
 ├── theme.json          # Design system: color, typography, spacing, layout
 ├── functions.php       # Theme setup, 'menu' template part area, WooCommerce hooks
-├── templates/          # FSE templates (index, single, page, page-with-title, archive, search, 404, WooCommerce: single-product, archive-product, product-search-results, coming-soon)
-├── parts/               # header.html, header-dark.html, footer.html, add-to-cart layouts
-├── styles/              # Style variations
+├── templates/          # FSE templates (index, home, single, page, page-with-title, page-dark-header, archive, search, 404; WooCommerce: single-product, archive-product, product-search-results, order-confirmation, coming-soon)
+├── parts/               # header, header-dark, footer, and simple/variable product add-to-cart layouts
+├── styles/              # Style variations (store, twilight)
 ├── assets/
 │   ├── logos/           # Winespring logo mark (SVG)
+│   ├── fonts/           # Self-hosted fonts (store/ holds the Store variation's)
 │   └── css/             # WooCommerce override stylesheet (enqueued conditionally)
-├── docs/                # Contributor notes (not shipped in the theme zip)
 └── languages/           # Translations (text domain: marin)
 ```
 
