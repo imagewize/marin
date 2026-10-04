@@ -116,69 +116,93 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"grid","minimumColumnWidth":"16rem"}} -->
-<div class="wp-block-group"><!-- wp:cover {"overlayColor":"main","isUserOverlayColor":true,"minHeight":360,"minHeightUnit":"px","contentPosition":"bottom left","style":{"spacing":{"padding":{"top":"32px","right":"32px","bottom":"32px","left":"32px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;min-height:360px"><span aria-hidden="true" class="wp-block-cover__background has-main-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Daily care</p>
+<div class="wp-block-group"><!-- wp:group {"style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"primary-accent","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+<div class="wp-block-group has-contrast-color has-primary-accent-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
+<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Daily care</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":3,"textColor":"base"} -->
-<h3 class="wp-block-heading has-base-color has-text-color">Moisturisers</h3>
+<!-- wp:heading {"level":3,"fontSize":"x-large"} -->
+<h3 class="wp-block-heading has-x-large-font-size">Moisturisers</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'moisturisers' ) ); ?>">Explore →</a></p>
+<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"fontSize":"small"} -->
+<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'moisturisers' ) ); ?>">Explore →</a></p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:group --></div></div>
-<!-- /wp:cover -->
+<!-- /wp:group -->
 
-<!-- wp:cover {"overlayColor":"primary","isUserOverlayColor":true,"minHeight":360,"minHeightUnit":"px","contentPosition":"bottom left","style":{"spacing":{"padding":{"top":"32px","right":"32px","bottom":"32px","left":"32px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;min-height:360px"><span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">New arrivals</p>
+<!-- wp:group {"layout":{"type":"flex","justifyContent":"right"}} -->
+<div class="wp-block-group"><!-- wp:image {"height":"170px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/jar.svg' ) ); ?>" alt="" style="width:auto;height:170px"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"sand-deep","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+<div class="wp-block-group has-contrast-color has-sand-deep-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
+<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">New arrivals</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":3,"textColor":"base"} -->
-<h3 class="wp-block-heading has-base-color has-text-color">Serums</h3>
+<!-- wp:heading {"level":3,"fontSize":"x-large"} -->
+<h3 class="wp-block-heading has-x-large-font-size">Serums</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'serums' ) ); ?>">Explore →</a></p>
+<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"fontSize":"small"} -->
+<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'serums' ) ); ?>">Explore →</a></p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:group --></div></div>
-<!-- /wp:cover -->
+<!-- /wp:group -->
 
-<!-- wp:cover {"overlayColor":"primary-alt","isUserOverlayColor":true,"minHeight":360,"minHeightUnit":"px","contentPosition":"bottom left","style":{"spacing":{"padding":{"top":"32px","right":"32px","bottom":"32px","left":"32px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;min-height:360px"><span aria-hidden="true" class="wp-block-cover__background has-primary-alt-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Daily essentials</p>
+<!-- wp:group {"layout":{"type":"flex","justifyContent":"right"}} -->
+<div class="wp-block-group"><!-- wp:image {"height":"210px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/serum.svg' ) ); ?>" alt="" style="width:auto;height:210px"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"primary","textColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+<div class="wp-block-group has-base-color has-primary-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
+<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Daily essentials</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":3,"textColor":"base"} -->
-<h3 class="wp-block-heading has-base-color has-text-color">Cleansers</h3>
+<!-- wp:heading {"level":3,"fontSize":"x-large"} -->
+<h3 class="wp-block-heading has-x-large-font-size">Cleansers</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'cleansers' ) ); ?>">Explore →</a></p>
+<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"fontSize":"small"} -->
+<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'cleansers' ) ); ?>">Explore →</a></p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:group --></div></div>
-<!-- /wp:cover -->
+<!-- /wp:group -->
 
-<!-- wp:cover {"overlayColor":"secondary","isUserOverlayColor":true,"minHeight":360,"minHeightUnit":"px","contentPosition":"bottom left","style":{"spacing":{"padding":{"top":"32px","right":"32px","bottom":"32px","left":"32px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;min-height:360px"><span aria-hidden="true" class="wp-block-cover__background has-secondary-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Gift ideas</p>
+<!-- wp:group {"layout":{"type":"flex","justifyContent":"right"}} -->
+<div class="wp-block-group"><!-- wp:image {"height":"210px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/bottle.svg' ) ); ?>" alt="" style="width:auto;height:210px"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+<div class="wp-block-group has-base-color has-accent-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
+<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Gift ideas</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":3,"textColor":"base"} -->
-<h3 class="wp-block-heading has-base-color has-text-color">Kits</h3>
+<!-- wp:heading {"level":3,"fontSize":"x-large"} -->
+<h3 class="wp-block-heading has-x-large-font-size">Kits</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'kits' ) ); ?>">Explore →</a></p>
+<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"fontSize":"small"} -->
+<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'kits' ) ); ?>">Explore →</a></p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:group --></div></div>
-<!-- /wp:cover --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"layout":{"type":"flex","justifyContent":"right"}} -->
+<div class="wp-block-group"><!-- wp:image {"height":"120px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/kit.svg' ) ); ?>" alt="" style="width:auto;height:120px"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
@@ -203,13 +227,14 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 
 <!-- wp:woocommerce/product-collection {"queryId":1,"query":{"perPage":4,"pages":0,"offset":0,"postType":"product","order":"desc","orderBy":"popularity","search":"","exclude":[],"inherit":false,"taxQuery":[],"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"dimensions":{"widthType":"fill","fixedWidth":""},"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":false,"previewMessage":"Actual products will vary depending on the page being viewed."}} -->
 <div class="wp-block-woocommerce-product-collection"><!-- wp:woocommerce/product-template -->
-<!-- wp:woocommerce/product-image {"showSaleBadge":false,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true,"aspectRatio":"3/4"} -->
+<!-- wp:woocommerce/product-image {"showSaleBadge":false,"isDescendentOfQueryLoop":true,"aspectRatio":"1"} -->
 <!-- wp:woocommerce/product-sale-badge {"isDescendentOfQueryLoop":true,"fontSize":"x-small","align":"left"} /-->
 <!-- /wp:woocommerce/product-image -->
 
-<!-- wp:post-terms {"term":"product_cat","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"secondary","fontSize":"x-small"} /-->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"1.25rem","right":"1.25rem","bottom":"1.5rem","left":"1.25rem"},"blockGap":"0.75rem"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:1.25rem;padding-right:1.25rem;padding-bottom:1.5rem;padding-left:1.25rem"><!-- wp:post-terms {"term":"product_cat","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"secondary","fontSize":"x-small"} /-->
 
-<!-- wp:post-title {"level":3,"isLink":true,"style":{"spacing":{"padding":{"left":"0","right":"0"}}},"fontSize":"large","fontFamily":"display"} /-->
+<!-- wp:post-title {"level":3,"isLink":true,"style":{"spacing":{"padding":{"left":"0","right":"0"}},"typography":{"fontSize":"1.5rem"}},"fontFamily":"display"} /-->
 
 <!-- wp:woocommerce/product-summary {"isDescendentOfQueryLoop":true,"summaryLength":14,"textColor":"secondary","fontSize":"small"} /-->
 
@@ -217,6 +242,7 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <div class="wp-block-group"><!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"textAlign":"left","style":{"spacing":{"padding":{"left":"0","right":"0"}}},"fontSize":"medium"} /-->
 
 <!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true,"textAlign":"left","style":{"spacing":{"padding":{"left":"1.25rem","right":"1.25rem","top":"0.5rem","bottom":"0.5rem"}}},"fontSize":"small","className":"is-style-outline"} /--></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
 <!-- /wp:woocommerce/product-template -->
 
@@ -386,18 +412,22 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:aludra/cta-banner -->
-<div class="wp-block-aludra-cta-banner alignfull" style="margin-top:0;margin-bottom:0"><div class="cta-banner__content"><!-- wp:heading {"className":"cta-banner__title","style":{"typography":{"lineHeight":"1.2"}}} -->
-<h2 class="wp-block-heading cta-banner__title" style="line-height:1.2">Not sure where to start?</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"className":"cta-banner__lead"} -->
-<p class="cta-banner__lead">The Essentials Kit bundles a cleanser, serum and moisturiser: a complete routine in three steps.</p>
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"104px","bottom":"104px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"24px"}},"backgroundColor":"accent","textColor":"white","layout":{"type":"constrained","contentSize":"760px"}} -->
+<div class="wp-block-group alignfull has-white-color has-accent-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:104px;padding-right:24px;padding-bottom:104px;padding-left:24px"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em","textAlign":"center"}},"fontSize":"small"} -->
+<p class="has-text-align-center has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">The Essentials Kit</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:buttons {"className":"cta-banner__ctas","layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons cta-banner__ctas"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $kit_url ); ?>">Shop the kit</a></div>
+<!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"display"} -->
+<h2 class="wp-block-heading has-text-align-center has-display-font-size">Not sure where to <em>start?</em></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"typography":{"textAlign":"center"}},"fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size">A cleanser, serum and moisturiser in travel sizes: a complete routine in three steps.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"base","textColor":"contrast","style":{"spacing":{"padding":{"left":"2.25rem","right":"2.25rem","top":"1rem","bottom":"1rem"}}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-contrast-color has-base-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( $kit_url ); ?>" style="padding-top:1rem;padding-right:2.25rem;padding-bottom:1rem;padding-left:2.25rem">Shop the kit</a></div>
 <!-- /wp:button --></div>
-<!-- /wp:buttons --></div></div>
-<!-- /wp:aludra/cta-banner -->
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
