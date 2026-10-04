@@ -96,6 +96,8 @@ in the database, not in this theme — Marin ships no menu template part files, 
 Alternate color palettes layered on the same `theme.json` design system. `styles/twilight.json` is
 the example — a dark, rose-accented variant. Follow this pattern for future variations: override
 `settings.color.palette` (keep the same slugs) and any `styles` overrides needed, nothing else.
+`styles/skincare.json` follows it too and reuses `store.json`'s fonts rather than shipping new ones; check
+every text/background pairing in a new palette against WCAG AA (4.5:1) before shipping it.
 
 ## Development
 

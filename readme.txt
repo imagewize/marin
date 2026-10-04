@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, ed
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,7 +24,7 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 * Full Site Editing (FSE) theme for WooCommerce stores
 * Solid design system via `theme.json` (colors, typography, spacing, layout)
 * WooCommerce block templates for single product and product archive
-* Style variations: Twilight (dark) and Store (warm retail palette, self-hosted fonts)
+* Style variations: Twilight (dark), Store (warm retail palette, self-hosted fonts) and Skincare (calm sage and cream, same fonts)
 * One page pattern (Store Home, needs Aludra and WooCommerce) — otherwise block-first composition
 * Pairs with the Aludra block library (mega menu, carousel, FAQ tabs, and more)
 * Translation-ready
@@ -37,6 +37,9 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.3.0 =
+* Added: Skincare style variation, a calm sage and cream palette that reuses the Store variation's fonts.
 
 = 1.2.0 =
 * Added: Store Home page pattern, a front page built from Aludra blocks and a WooCommerce product grid. It is hidden unless WooCommerce is active and the Aludra plugin is installed.

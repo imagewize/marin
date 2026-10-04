@@ -3,6 +3,15 @@
 All notable changes to Marin are documented in this file. Marin was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.3.0] - 2026-10-04
+
+### Added
+- `styles/skincare.json`: a calm sage, cream and clay style variation for skincare and wellness
+  stores. Same palette slugs as the base design system, so Aludra blocks and the Store Home pattern
+  pick it up unchanged; reuses the Store variation's self-hosted Cormorant Garamond and Jost, so no
+  new font files. Every text/background pairing in the palette meets WCAG AA (4.5:1).
+- README: the demo-content steps now mention picking the Skincare style.
+
 ## [1.2.0] - 2026-10-04
 
 ### Added
