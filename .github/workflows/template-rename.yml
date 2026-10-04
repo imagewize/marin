@@ -28,6 +28,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          # The rename action authenticates its own push; checkout's persisted
+          # token would send a second Authorization header (HTTP 400).
+          persist-credentials: false
 
       # Pinned to its only release (2023, node16 runtime) — upstream has shipped
       # nothing since and there's no newer tag to move to. GitHub runs node16/20
