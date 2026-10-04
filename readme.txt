@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, ed
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -37,6 +37,9 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.0.1 =
+* Changed: a Winespring logo mark (grape cluster, Material Design Icons) replaces the inherited Aviendha rose, with a dark-mode variant for the README.
 
 = 1.0.0 =
 * Initial release. Created from Aviendha 1.18.4 and focused on WooCommerce stores.
