@@ -211,7 +211,7 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 
 <!-- wp:post-title {"level":3,"isLink":true,"fontSize":"large","fontFamily":"display"} /-->
 
-<!-- wp:woocommerce/product-summary {"isDescendentOfQueryLoop":true,"summaryLength":14,"showDescriptionIfEmpty":false,"textColor":"secondary","fontSize":"small"} /-->
+<!-- wp:woocommerce/product-summary {"isDescendentOfQueryLoop":true,"summaryLength":14,"textColor":"secondary","fontSize":"small"} /-->
 
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"textAlign":"left","fontSize":"medium"} /-->
@@ -337,7 +337,7 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:aludra/split-section -->
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"48px"}},"backgroundColor":"tertiary","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
-<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:heading {"textAlign":"center","textColor":"contrast"} -->
+<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"textColor":"contrast"} -->
 <h2 class="wp-block-heading has-text-align-center has-contrast-color has-text-color">Loved by our <em>customers</em></h2>
 <!-- /wp:heading -->
 
