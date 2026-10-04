@@ -128,8 +128,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"grid","minimumColumnWidth":"16rem"}} -->
-<div class="wp-block-group"><!-- wp:group {"style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"primary-accent","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
-<div class="wp-block-group has-contrast-color has-primary-accent-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:group {"className":"marin-tile","style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"primary-accent","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+<div class="wp-block-group marin-tile has-contrast-color has-primary-accent-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
 <p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Daily care</p>
 <!-- /wp:paragraph -->
@@ -144,14 +144,14 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:group {"layout":{"type":"flex","justifyContent":"right"}} -->
-<div class="wp-block-group"><!-- wp:image {"height":"170px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/jar.svg' ) ); ?>" alt="" style="width:auto;height:170px"/></figure>
+<div class="wp-block-group"><!-- wp:image {"className":"marin-art","height":"170px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full is-resized marin-art"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/jar.svg' ) ); ?>" alt="" style="width:auto;height:170px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"sand-deep","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
-<div class="wp-block-group has-contrast-color has-sand-deep-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<!-- wp:group {"className":"marin-tile","style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"sand-deep","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+<div class="wp-block-group marin-tile has-contrast-color has-sand-deep-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
 <p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">New arrivals</p>
 <!-- /wp:paragraph -->
@@ -166,14 +166,14 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:group {"layout":{"type":"flex","justifyContent":"right"}} -->
-<div class="wp-block-group"><!-- wp:image {"height":"210px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/serum.svg' ) ); ?>" alt="" style="width:auto;height:210px"/></figure>
+<div class="wp-block-group"><!-- wp:image {"className":"marin-art","height":"210px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full is-resized marin-art"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/serum.svg' ) ); ?>" alt="" style="width:auto;height:210px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"primary","textColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
-<div class="wp-block-group has-base-color has-primary-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<!-- wp:group {"className":"marin-tile","style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"primary","textColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+<div class="wp-block-group marin-tile has-base-color has-primary-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
 <p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Daily essentials</p>
 <!-- /wp:paragraph -->
@@ -188,14 +188,14 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:group {"layout":{"type":"flex","justifyContent":"right"}} -->
-<div class="wp-block-group"><!-- wp:image {"height":"210px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/bottle.svg' ) ); ?>" alt="" style="width:auto;height:210px"/></figure>
+<div class="wp-block-group"><!-- wp:image {"className":"marin-art","height":"210px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full is-resized marin-art"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/bottle.svg' ) ); ?>" alt="" style="width:auto;height:210px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
-<div class="wp-block-group has-base-color has-accent-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<!-- wp:group {"className":"marin-tile","style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+<div class="wp-block-group marin-tile has-base-color has-accent-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
 <p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Gift ideas</p>
 <!-- /wp:paragraph -->
@@ -210,8 +210,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:group {"layout":{"type":"flex","justifyContent":"right"}} -->
-<div class="wp-block-group"><!-- wp:image {"height":"120px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/kit.svg' ) ); ?>" alt="" style="width:auto;height:120px"/></figure>
+<div class="wp-block-group"><!-- wp:image {"className":"marin-art","height":"120px","width":"auto","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full is-resized marin-art"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/kit.svg' ) ); ?>" alt="" style="width:auto;height:120px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
