@@ -1,6 +1,6 @@
 # Code review rules — Marin
 
-Marin is a lean full-site-editing **starter theme**: no bundled patterns, no
+Marin is a lean full-site-editing **WooCommerce theme** for client stores: no bundled patterns, no
 JS build step, no runtime Composer or npm dependencies. `theme.json`, the
 templates in `templates/`, and the style variations in `styles/` are the
 product. These rules are read by the `code-review` skill

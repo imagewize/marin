@@ -1,13 +1,14 @@
 {
 	"name": "marin",
-	"version": "1.0.1",
-	"description": "A lean full-site-editing starter theme for WordPress, designed to be forked and customized.",
+	"version": "1.0.2",
+	"description": "A lean full-site-editing WooCommerce theme for WordPress, built for client e-commerce stores.",
 	"keywords": [
 		"WordPress",
 		"theme",
 		"block-theme",
 		"fse",
-		"starter-theme"
+		"woocommerce",
+		"e-commerce"
 	],
 	"author": "Jasper Frumau",
 	"license": "GPL-3.0-or-later",

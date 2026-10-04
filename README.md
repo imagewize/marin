@@ -17,7 +17,7 @@
 </div>
 <div align="center">
 
-A lean full-site-editing starter theme for WordPress.
+A lean full-site-editing WooCommerce theme for client e-commerce stores.
 </div>
 
 ## Description
@@ -32,12 +32,12 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 
 - WordPress 6.6+
 - PHP 8.0+
-- WooCommerce (optional, for store templates)
+- WooCommerce (the point of the theme; templates degrade gracefully without it)
 - Aludra plugin (recommended, not required)
 
 ## Features
 
-- **Starter theme foundation** — designed to be forked and customized, with a clean separation of concerns and no opinionated patterns that would need removal
+- **Store-first block theme** — built for WooCommerce client stores; fork it per client (it is a template repository) or use it as the shared base, with no opinionated patterns that would need removal
 - **Design system** — `theme.json` defines the color palette, typography, spacing, and border radii; color/spacing slugs match what Aludra's own block styles expect (`base`, `contrast`, `secondary`, `main`, `primary`, `accent`, `tertiary`, `border-light`)
 - **WooCommerce templates** — `templates/single-product.html`, `templates/archive-product.html`, `templates/product-search-results.html`, and `templates/coming-soon.html` are theme-provided; cart, checkout, and category-archive templates fall back to WooCommerce's own block-theme defaults. The product archive and search results ship a results count, catalog sorting, a filters sidebar (price, category, availability, rating) and an empty state; the single product template uses the block-based add to cart, with theme layouts for simple and variable products in `parts/`. The coming-soon template wraps WooCommerce's coming-soon block with the theme's header and footer.
 - **Degrades gracefully without WooCommerce** — with the plugin inactive, the store templates and the header's mini cart are filtered out rather than left to render as unsupported blocks. WooCommerce's own bundled `woocommerce-blocks/*` patterns are unregistered when it *is* active — the theme neither designed nor styles them, and they crowd out core's.
