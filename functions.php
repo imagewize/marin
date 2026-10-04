@@ -220,9 +220,30 @@ function marin_add_to_cart_template_part_area( $areas ) {
 }
 
 /**
+ * Register the store home pattern only where it can render.
+ *
+ * `marin/home-store` is built from Aludra blocks and a WooCommerce product
+ * grid. Pattern files register themselves, so without both plugins it would be
+ * offered in the inserter and insert unsupported blocks. Runs late on `init`,
+ * after plugins have registered their blocks.
+ */
+function marin_maybe_unregister_store_home_pattern() {
+	$registry = \WP_Block_Type_Registry::get_instance();
+
+	if ( class_exists( 'WooCommerce' ) && $registry->is_registered( 'aludra/hero-split' ) ) {
+		return;
+	}
+
+	if ( \WP_Block_Patterns_Registry::get_instance()->is_registered( 'marin/home-store' ) ) {
+		unregister_block_pattern( 'marin/home-store' );
+	}
+}
+add_action( 'init', __NAMESPACE__ . '\marin_maybe_unregister_store_home_pattern', 999 );
+
+/**
  * Unregister WooCommerce's bundled block patterns.
  *
- * Marin ships no patterns of its own; WooCommerce registers a large set
+ * Marin's own pattern is `marin/home-store`; WooCommerce registers a large set
  * which this theme neither designed nor styles, and which crowds out core's.
  * The `woocommerce/*` patterns are left alone — the coming soon templates
  * render them.
@@ -241,7 +262,7 @@ function marin_unregister_woocommerce_patterns() {
  * Disable WooCommerce's full-composability pattern toolkit.
  *
  * Its onboarding flow offers to assemble pages from patterns and overwrite the
- * theme's templates, neither of which applies to a theme without patterns.
+ * theme's templates, neither of which fits a theme that ships one hand-built pattern.
  *
  * @param array $features Enabled WooCommerce admin features.
  * @return array Features without the pattern toolkit.
