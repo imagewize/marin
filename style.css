@@ -350,28 +350,54 @@ body .marin-header--dark .wp-block-site-logo {
 }
 
 /*
- * Core shrink-wraps the overlay's link list to its own content width, then
- * right-aligns that shrink-wrapped box against the modal's already-padded
- * edge (`align-items: flex-end` on the container-content, matching the
- * collapsed hamburger's own justification) — the same edge inset the close
- * button sits inside. Right-anchoring a shrink-wrapped box that way is
- * fragile: anything that widens the list past its measured content width
- * (a longer translated label, a larger accessibility text-size setting)
- * pushes its edge past the modal boundary with no margin to absorb it, and
- * the link reads as clipped against the screen edge.
+ * The open overlay is a full-screen menu, so it is laid out as one: a
+ * left-aligned, full-width list of large display-face links separated by
+ * hairlines, rather than core's shrink-wrapped, right-anchored list of
+ * body-size links on a white screen.
  *
- * Stretch the list to the full padded content width instead, then
- * right-align each link's own text inside that guaranteed box. The list can
- * no longer be wider than the box it's aligned within, so its edge — and
- * the close button's — stay pinned to the same padded inset regardless of
- * label length.
+ * Core's `align-items: flex-end` on the container-content shrink-wraps the list
+ * and pins it to the right edge, which also made it fragile — a longer label
+ * or a larger text-size setting pushed the list past the padded edge and the
+ * link read as clipped. Stretching the list to the full padded width removes
+ * that: it can never be wider than the box it is aligned in.
  */
 .marin-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
 	align-items: stretch;
+	padding-top: 2.5rem;
 }
 
 .marin-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
-	text-align: right;
+	align-items: stretch;
+	gap: 0;
+	text-align: left;
+	width: 100%;
+}
+
+.marin-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
+	align-items: stretch;
+	border-bottom: 1px solid var(--wp--preset--color--border-light);
+	width: 100%;
+}
+
+.marin-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content {
+	display: block;
+	font-family: var(--wp--preset--font-family--display);
+	font-size: var(--wp--preset--font-size--large);
+	padding: 0.9rem 0;
+}
+
+/*
+ * Core paints the overlay white (`#fff`) whenever the navigation block has no
+ * background of its own, which leaves it a stark sheet next to the cream page
+ * and the header it slides out of. Use the theme's own `base`.
+ *
+ * One class more than core's `.wp-block-navigation:not(.has-background)
+ * .wp-block-navigation__responsive-container.is-menu-open`, so no !important.
+ * Scoped to `.is-menu-open` for the same reason as the dark-header rule below:
+ * above the breakpoint the same element renders the inline desktop menu.
+ */
+.marin-header .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+	background-color: var(--wp--preset--color--base);
 }
 
 /*
@@ -384,13 +410,11 @@ body .marin-header--dark .wp-block-site-logo {
  * hamburger it replaces actually sits.
  *
  * Give the overlay the header's own padding directly instead of relying on
- * that chain, so the close button opens right where the hamburger was. This
- * also becomes the right-hand inset the link list (§ above) stretches
- * against, keeping both edges aligned.
+ * that chain, so the close button opens right where the hamburger was. The
+ * left and bottom insets match, so the link list sits inside the same margins.
  */
 .marin-header .wp-block-navigation__responsive-container.is-menu-open {
-	padding-top: var(--wp--preset--spacing--small);
-	padding-right: var(--wp--preset--spacing--small);
+	padding: var(--wp--preset--spacing--small);
 }
 
 /*
