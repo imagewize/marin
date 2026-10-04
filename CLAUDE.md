@@ -50,10 +50,13 @@ chosen to match what Aludra's block styles and patterns already reference (mega-
 ### Templates (`templates/`)
 
 Real block markup — not pattern references. Includes core templates (`index`, `home`, `archive`,
-`single`, `page`, `search`, `404`) and two WooCommerce templates:
+`single`, `page`, `search`, `404`) and the WooCommerce templates. The two core ones:
 
 - `single-product.html` — product gallery, title, price, add-to-cart, details, related products
 - `archive-product.html` — product grid via `woocommerce/product-collection`
+
+`product-search-results.html`, `order-confirmation.html` and `coming-soon.html` are also
+theme-provided; see the README for what each ships.
 
 **`page.html` (default) omits `post-title`.** Most Marin pages are composed directly from blocks
 (or Aludra blocks) whose own heading already serves as the page's title — e.g. `aludra/hero-split`'s
@@ -68,7 +71,9 @@ need — don't ship untested block markup for the sake of completeness.
 
 ### Template parts (`parts/`)
 
-`header.html` and `footer.html` only. No file-based `menu` template part — see below.
+`header.html`, `header-dark.html` (used by `page-dark-header.html`) and `footer.html`, plus the
+`simple-product-add-to-cart-with-options.html` and `variable-product-add-to-cart-with-options.html`
+add-to-cart layouts for the single-product template. No file-based `menu` template part — see below.
 
 ### Aludra mega-menu integration
 
@@ -252,7 +257,7 @@ one large commit bundling unrelated changes. Makes history easier to review and 
 - `theme.json` — design system (single source of truth)
 - `functions.php` — theme setup, `menu` template part area registration, WooCommerce hooks
 - `templates/*.html` — FSE templates, including WooCommerce single-product/archive-product
-- `parts/header.html`, `parts/footer.html` — template parts
+- `parts/*.html` — header, dark header, footer and add-to-cart template parts
 - `styles/*.json` — style variations
 - `assets/logos/` — Winespring logo mark (light and dark variants for the README `<picture>`) — grape cluster for the Winespring Inn (SVG, Material Design Icons `fruit-grapes` via Blade Icons, Apache 2.0)
 - `composer.json` / `phpcs.xml` — PHP lint/coding-standards tooling
