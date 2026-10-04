@@ -42,7 +42,7 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 - **WooCommerce templates** — `templates/single-product.html`, `templates/archive-product.html`, `templates/product-search-results.html`, and `templates/coming-soon.html` are theme-provided; cart, checkout, and category-archive templates fall back to WooCommerce's own block-theme defaults. The product archive and search results ship a results count, catalog sorting, a filters sidebar (price, category, availability, rating) and an empty state; the single product template uses the block-based add to cart, with theme layouts for simple and variable products in `parts/`. The coming-soon template wraps WooCommerce's coming-soon block with the theme's header and footer.
 - **Degrades gracefully without WooCommerce** — with the plugin inactive, the store templates and the header's mini cart are filtered out rather than left to render as unsupported blocks. WooCommerce's own bundled `woocommerce-blocks/*` patterns are unregistered when it *is* active — the theme neither designed nor styles them, and they crowd out core's.
 - **Two page templates** — `page.html` (default) omits `post-title` since most pages get their title from a block's own heading; `page-with-title.html` (selectable per-page under Page → Template) adds the conventional title treatment.
-- **Style variations** — see `styles/` (`twilight.json` — dark, rose-accented; `store.json` — warm retail palette with self-hosted Cormorant Garamond and Jost) for alternate palettes on top of the same design system.
+- **Style variations** — see `styles/` (`twilight.json` — dark, rose-accented; `store.json` — warm retail palette with self-hosted Cormorant Garamond and Jost; `skincare.json` — calm sage and cream palette with the same fonts) for alternate palettes on top of the same design system.
 - **One page pattern, no library** — `marin/home-store` (**Store Home**) is a front page built from Aludra blocks and a WooCommerce product grid: hero, trust bar, category cards, newest products, story, stats, reviews and a closing call to action. It is registered only when WooCommerce is active **and** the Aludra plugin is installed — without Aludra it is hidden rather than inserting unsupported blocks. Everything else is block-first composition: core's own patterns stay registered, so the inserter is never empty; insert `aludra/*` blocks (or core blocks) directly into pages and templates, then add your own patterns as needed.
 
 ## Installation
@@ -65,7 +65,7 @@ cd marin-demo-content
 wp eval-file seed-skincare-products.php
 ```
 
-For the front page, install the [Aludra](https://github.com/imagewize/aludra) plugin (`composer require imagewize/aludra`), edit your Home page, insert the **Store Home** pattern (Patterns → Featured) and set the page as your static front page under **Settings → Reading**.
+For the front page, install the [Aludra](https://github.com/imagewize/aludra) plugin (`composer require imagewize/aludra`), edit your Home page, insert the **Store Home** pattern (Patterns → Featured) and set the page as your static front page under **Settings → Reading**. Pick the **Skincare** style under **Appearance → Editor → Styles** to match the products.
 
 ## Building a client store
 
@@ -88,7 +88,7 @@ marin/
 ├── templates/          # FSE templates (index, home, single, page, page-with-title, page-dark-header, archive, search, 404; WooCommerce: single-product, archive-product, product-search-results, order-confirmation, coming-soon)
 ├── patterns/            # Store Home page pattern (needs Aludra + WooCommerce)
 ├── parts/               # header, header-dark, footer, and simple/variable product add-to-cart layouts
-├── styles/              # Style variations (store, twilight)
+├── styles/              # Style variations (store, skincare, twilight)
 ├── assets/
 │   ├── logos/           # Winespring logo mark (SVG)
 │   ├── fonts/           # Self-hosted fonts (store/ holds the Store variation's)
