@@ -3,6 +3,20 @@
 All notable changes to Marin are documented in this file. Marin was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.1.0] - 2026-10-04
+
+### Added
+- Header product search: an icon-only `core/search` block limited to products (`post_type=product`)
+  sits before the account and mini-cart icons in both `parts/header.html` and
+  `parts/header-dark.html`.
+- README: a "Demo content" section pointing to
+  [imagewize/marin-demo-content](https://github.com/imagewize/marin-demo-content), a WP-CLI seeder
+  with 16 skincare products and placeholder packshots.
+
+### Changed
+- Both headers no longer ship the inherited "Start a project" call-to-action button, which made no
+  sense on a store. The `.marin-header__cta` styles were removed with it.
+
 ## [1.0.4] - 2026-10-04
 
 ### Changed
