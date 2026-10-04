@@ -44,14 +44,14 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 
 == Third-Party Libraries ==
 
-= Ionicons (via Blade Icons) =
-* License: MIT License
-* Source: https://blade-ui-kit.com/blade-icons/ionicon-rose
-* License URI: https://github.com/driesvints/blade-icons/blob/main/LICENSE.md
-* Used in: `assets/logos/marin-rose-primary.svg` and `assets/logos/marin-rose-outline.svg`
-* Purpose: The "rose" icon is used, unmodified except for recoloring, as the theme's logo mark.
+= Material Design Icons (via Blade Icons) =
+* License: Apache License, Version 2.0
+* Source: https://blade-ui-kit.com/blade-icons/mdi-fruit-grapes
+* License URI: https://www.apache.org/licenses/LICENSE-2.0
+* Used in: `assets/logos/marin-winespring-primary.svg` and `assets/logos/marin-winespring-dark.svg`
+* Purpose: The "fruit-grapes" icon is used, unmodified except for recoloring, as the theme's logo mark (the Winespring Inn).
 
-The MIT License is GPL-compatible.
+The Apache License 2.0 is GPLv3-compatible.
 
 = Bricolage Grotesque =
 * License: SIL Open Font License, Version 1.1
