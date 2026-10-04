@@ -201,15 +201,23 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
-<!-- wp:woocommerce/product-collection {"queryId":1,"query":{"perPage":4,"pages":0,"offset":0,"postType":"product","order":"desc","orderBy":"date","search":"","exclude":[],"inherit":false,"taxQuery":[],"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"dimensions":{"widthType":"fill","fixedWidth":""},"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":false,"previewMessage":"Actual products will vary depending on the page being viewed."}} -->
+<!-- wp:woocommerce/product-collection {"queryId":1,"query":{"perPage":4,"pages":0,"offset":0,"postType":"product","order":"desc","orderBy":"popularity","search":"","exclude":[],"inherit":false,"taxQuery":[],"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"dimensions":{"widthType":"fill","fixedWidth":""},"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":false,"previewMessage":"Actual products will vary depending on the page being viewed."}} -->
 <div class="wp-block-woocommerce-product-collection"><!-- wp:woocommerce/product-template -->
 <!-- wp:woocommerce/product-image {"showSaleBadge":false,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true,"aspectRatio":"3/4"} -->
 <!-- wp:woocommerce/product-sale-badge {"isDescendentOfQueryLoop":true,"fontSize":"x-small","align":"left"} /-->
 <!-- /wp:woocommerce/product-image -->
 
-<!-- wp:post-title {"level":3,"isLink":true,"fontSize":"medium"} /-->
+<!-- wp:post-terms {"term":"product_cat","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"secondary","fontSize":"x-small"} /-->
 
-<!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"textAlign":"left","fontSize":"small"} /-->
+<!-- wp:post-title {"level":3,"isLink":true,"fontSize":"large","fontFamily":"display"} /-->
+
+<!-- wp:woocommerce/product-summary {"isDescendentOfQueryLoop":true,"summaryLength":14,"showDescriptionIfEmpty":false,"textColor":"secondary","fontSize":"small"} /-->
+
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+<div class="wp-block-group"><!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"textAlign":"left","fontSize":"medium"} /-->
+
+<!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true,"textAlign":"left","fontSize":"small","className":"is-style-outline"} /--></div>
+<!-- /wp:group -->
 <!-- /wp:woocommerce/product-template -->
 
 <!-- wp:woocommerce/product-collection-no-results -->
@@ -260,65 +268,55 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:aludra/stat-item --></div></div>
 <!-- /wp:aludra/stat-rail -->
 
-<!-- wp:aludra/testimonial-grid -->
-<div data-slick="{&quot;slidesToShow&quot;:3,&quot;slidesToScroll&quot;:1,&quot;arrows&quot;:true,&quot;dots&quot;:true,&quot;infinite&quot;:true,&quot;autoplay&quot;:false,&quot;autoplaySpeed&quot;:3000,&quot;speed&quot;:300,&quot;adaptiveHeight&quot;:false,&quot;responsive&quot;:[{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesToScroll&quot;:1}}]}" data-dots-bottom="-45px" data-slide-spacing="12" data-arrow-color="#1a1a1a" data-arrow-background="#d4ecf5" data-arrow-hover-color="#000000" data-arrow-hover-background="#d4ecf5" class="wp-block-aludra-testimonial-grid alignfull" style="margin-top:0;margin-bottom:0"><!-- wp:heading {"style":{"typography":{"fontWeight":"700","lineHeight":"1.3","textAlign":"center"},"spacing":{"margin":{"bottom":"3rem"}}},"textColor":"contrast","fontSize":"3xl","fontFamily":"montserrat"} -->
-<h2 class="wp-block-heading has-text-align-center has-contrast-color has-text-color has-montserrat-font-family has-3-xl-font-size" style="margin-bottom:3rem;font-weight:700;line-height:1.3">Loved by our customers</h2>
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"48px"}},"backgroundColor":"tertiary","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
+<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:heading {"textAlign":"center","textColor":"contrast"} -->
+<h2 class="wp-block-heading has-text-align-center has-contrast-color has-text-color">Loved by our <em>customers</em></h2>
 <!-- /wp:heading -->
 
-<!-- wp:group {"className":"testimonial-grid__card","style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}},"border":{"radius":"12px"}},"backgroundColor":"base"} -->
-<div class="wp-block-group testimonial-grid__card has-base-background-color has-background" style="border-radius:12px;padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem"><!-- wp:paragraph {"className":"testimonial-grid__stars","style":{"spacing":{"margin":{"bottom":"1rem"}},"typography":{"letterSpacing":"0.15em"}},"textColor":"accent","fontSize":"lg"} -->
-<p class="testimonial-grid__stars has-accent-color has-text-color has-lg-font-size" style="margin-bottom:1rem;letter-spacing:0.15em"><span class="screen-reader-text">Rated 5 out of 5 stars</span><span aria-hidden="true">★★★★★</span></p>
+<!-- wp:group {"style":{"spacing":{"blockGap":"20px"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
+<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"padding":{"top":"2.25rem","right":"2.25rem","bottom":"2.25rem","left":"2.25rem"},"blockGap":"1rem"},"border":{"radius":"16px","width":"1px"}},"borderColor":"border-light","backgroundColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:16px;padding-top:2.25rem;padding-right:2.25rem;padding-bottom:2.25rem;padding-left:2.25rem"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"0.15em"}},"textColor":"accent","fontSize":"medium"} -->
+<p class="has-accent-color has-text-color has-medium-font-size" style="letter-spacing:0.15em"><span class="screen-reader-text">Rated 5 out of 5 stars</span><span aria-hidden="true">★★★★★</span></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"className":"testimonial-grid__quote","style":{"typography":{"fontStyle":"italic","lineHeight":"1.6"},"spacing":{"margin":{"bottom":"1.5rem"}}},"textColor":"base-accent","fontSize":"lg","fontFamily":"open-sans"} -->
-<p class="testimonial-grid__quote has-base-accent-color has-text-color has-open-sans-font-family has-lg-font-size" style="margin-bottom:1.5rem;font-style:italic;line-height:1.6">Beautifully made and exactly as described. It arrived quickly and I have used it every day since.</p>
+<!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","lineHeight":"1.35"}},"textColor":"contrast","fontSize":"large","fontFamily":"display"} -->
+<p class="has-contrast-color has-text-color has-display-font-family has-large-font-size" style="font-style:italic;line-height:1.35">Beautifully made and exactly as described. It arrived quickly and I have used it every day since.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"className":"testimonial-grid__author","style":{"typography":{"fontWeight":"600","lineHeight":"1.4"},"spacing":{"margin":{"bottom":"0.25rem"}}},"textColor":"primary","fontSize":"base","fontFamily":"montserrat"} -->
-<p class="testimonial-grid__author has-primary-color has-text-color has-montserrat-font-family has-base-font-size" style="margin-bottom:0.25rem;font-weight:600;line-height:1.4">Verified buyer</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"testimonial-grid__company","style":{"typography":{"lineHeight":"1.4"},"spacing":{"margin":{"bottom":"0"}}},"textColor":"secondary","fontSize":"sm","fontFamily":"open-sans"} -->
-<p class="testimonial-grid__company has-secondary-color has-text-color has-open-sans-font-family has-sm-font-size" style="margin-bottom:0;line-height:1.4">London</p>
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"small"} -->
+<p class="has-small-font-size" style="font-weight:600">Verified buyer, <span style="font-weight:400">London</span></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"testimonial-grid__card","style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}},"border":{"radius":"12px"}},"backgroundColor":"base"} -->
-<div class="wp-block-group testimonial-grid__card has-base-background-color has-background" style="border-radius:12px;padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem"><!-- wp:paragraph {"className":"testimonial-grid__stars","style":{"spacing":{"margin":{"bottom":"1rem"}},"typography":{"letterSpacing":"0.15em"}},"textColor":"accent","fontSize":"lg"} -->
-<p class="testimonial-grid__stars has-accent-color has-text-color has-lg-font-size" style="margin-bottom:1rem;letter-spacing:0.15em"><span class="screen-reader-text">Rated 5 out of 5 stars</span><span aria-hidden="true">★★★★★</span></p>
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"2.25rem","right":"2.25rem","bottom":"2.25rem","left":"2.25rem"},"blockGap":"1rem"},"border":{"radius":"16px","width":"1px"}},"borderColor":"border-light","backgroundColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:16px;padding-top:2.25rem;padding-right:2.25rem;padding-bottom:2.25rem;padding-left:2.25rem"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"0.15em"}},"textColor":"accent","fontSize":"medium"} -->
+<p class="has-accent-color has-text-color has-medium-font-size" style="letter-spacing:0.15em"><span class="screen-reader-text">Rated 5 out of 5 stars</span><span aria-hidden="true">★★★★★</span></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"className":"testimonial-grid__quote","style":{"typography":{"fontStyle":"italic","lineHeight":"1.6"},"spacing":{"margin":{"bottom":"1.5rem"}}},"textColor":"base-accent","fontSize":"lg","fontFamily":"open-sans"} -->
-<p class="testimonial-grid__quote has-base-accent-color has-text-color has-open-sans-font-family has-lg-font-size" style="margin-bottom:1.5rem;font-style:italic;line-height:1.6">The quality is a step above anything else I have bought in this category. Easily worth the price.</p>
+<!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","lineHeight":"1.35"}},"textColor":"contrast","fontSize":"large","fontFamily":"display"} -->
+<p class="has-contrast-color has-text-color has-display-font-family has-large-font-size" style="font-style:italic;line-height:1.35">The quality is a step above anything else I have bought in this category. Easily worth the price.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"className":"testimonial-grid__author","style":{"typography":{"fontWeight":"600","lineHeight":"1.4"},"spacing":{"margin":{"bottom":"0.25rem"}}},"textColor":"primary","fontSize":"base","fontFamily":"montserrat"} -->
-<p class="testimonial-grid__author has-primary-color has-text-color has-montserrat-font-family has-base-font-size" style="margin-bottom:0.25rem;font-weight:600;line-height:1.4">Verified buyer</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"testimonial-grid__company","style":{"typography":{"lineHeight":"1.4"},"spacing":{"margin":{"bottom":"0"}}},"textColor":"secondary","fontSize":"sm","fontFamily":"open-sans"} -->
-<p class="testimonial-grid__company has-secondary-color has-text-color has-open-sans-font-family has-sm-font-size" style="margin-bottom:0;line-height:1.4">Melbourne</p>
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"small"} -->
+<p class="has-small-font-size" style="font-weight:600">Verified buyer, <span style="font-weight:400">Melbourne</span></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"testimonial-grid__card","style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}},"border":{"radius":"12px"}},"backgroundColor":"base"} -->
-<div class="wp-block-group testimonial-grid__card has-base-background-color has-background" style="border-radius:12px;padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem"><!-- wp:paragraph {"className":"testimonial-grid__stars","style":{"spacing":{"margin":{"bottom":"1rem"}},"typography":{"letterSpacing":"0.15em"}},"textColor":"accent","fontSize":"lg"} -->
-<p class="testimonial-grid__stars has-accent-color has-text-color has-lg-font-size" style="margin-bottom:1rem;letter-spacing:0.15em"><span class="screen-reader-text">Rated 5 out of 5 stars</span><span aria-hidden="true">★★★★★</span></p>
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"2.25rem","right":"2.25rem","bottom":"2.25rem","left":"2.25rem"},"blockGap":"1rem"},"border":{"radius":"16px","width":"1px"}},"borderColor":"border-light","backgroundColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:16px;padding-top:2.25rem;padding-right:2.25rem;padding-bottom:2.25rem;padding-left:2.25rem"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"0.15em"}},"textColor":"accent","fontSize":"medium"} -->
+<p class="has-accent-color has-text-color has-medium-font-size" style="letter-spacing:0.15em"><span class="screen-reader-text">Rated 5 out of 5 stars</span><span aria-hidden="true">★★★★★</span></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"className":"testimonial-grid__quote","style":{"typography":{"fontStyle":"italic","lineHeight":"1.6"},"spacing":{"margin":{"bottom":"1.5rem"}}},"textColor":"base-accent","fontSize":"lg","fontFamily":"open-sans"} -->
-<p class="testimonial-grid__quote has-base-accent-color has-text-color has-open-sans-font-family has-lg-font-size" style="margin-bottom:1.5rem;font-style:italic;line-height:1.6">Great service from start to finish, and the packaging alone made it feel like a gift. I will be back.</p>
+<!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","lineHeight":"1.35"}},"textColor":"contrast","fontSize":"large","fontFamily":"display"} -->
+<p class="has-contrast-color has-text-color has-display-font-family has-large-font-size" style="font-style:italic;line-height:1.35">Great service from start to finish, and the packaging alone made it feel like a gift. I will be back.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"className":"testimonial-grid__author","style":{"typography":{"fontWeight":"600","lineHeight":"1.4"},"spacing":{"margin":{"bottom":"0.25rem"}}},"textColor":"primary","fontSize":"base","fontFamily":"montserrat"} -->
-<p class="testimonial-grid__author has-primary-color has-text-color has-montserrat-font-family has-base-font-size" style="margin-bottom:0.25rem;font-weight:600;line-height:1.4">Verified buyer</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"testimonial-grid__company","style":{"typography":{"lineHeight":"1.4"},"spacing":{"margin":{"bottom":"0"}}},"textColor":"secondary","fontSize":"sm","fontFamily":"open-sans"} -->
-<p class="testimonial-grid__company has-secondary-color has-text-color has-open-sans-font-family has-sm-font-size" style="margin-bottom:0;line-height:1.4">Toronto</p>
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"small"} -->
+<p class="has-small-font-size" style="font-weight:600">Verified buyer, <span style="font-weight:400">Toronto</span></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
-<!-- /wp:aludra/testimonial-grid -->
+<!-- /wp:group --></div>
+<!-- /wp:group -->
 
 <!-- wp:aludra/cta-banner -->
 <div class="wp-block-aludra-cta-banner alignfull" style="margin-top:0;margin-bottom:0"><div class="cta-banner__content"><!-- wp:heading {"className":"cta-banner__title","style":{"typography":{"lineHeight":"1.2"}}} -->
