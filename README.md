@@ -1,15 +1,15 @@
 <p align="center">
-  <img src="assets/logos/aviendha-rose-primary.svg" alt="Aviendha Logo" width="128" height="128">
+  <img src="assets/logos/marin-rose-primary.svg" alt="Marin Logo" width="128" height="128">
 </p>
 <div align="center">
-<h1>Aviendha</h1>
+<h1>Marin</h1>
 </div>
 <div align="center">
 
-[![Total Downloads](https://img.shields.io/packagist/dt/imagewize/aviendha.svg)](https://packagist.org/packages/imagewize/aviendha)
-[![Latest Stable Version](https://img.shields.io/packagist/v/imagewize/aviendha.svg)](https://packagist.org/packages/imagewize/aviendha)
-[![License](https://img.shields.io/packagist/l/imagewize/aviendha.svg)](https://packagist.org/packages/imagewize/aviendha)
-[![Theme Check](https://github.com/imagewize/aviendha/actions/workflows/theme-check.yml/badge.svg)](https://github.com/imagewize/aviendha/actions/workflows/theme-check.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/imagewize/marin.svg)](https://packagist.org/packages/imagewize/marin)
+[![Latest Stable Version](https://img.shields.io/packagist/v/imagewize/marin.svg)](https://packagist.org/packages/imagewize/marin)
+[![License](https://img.shields.io/packagist/l/imagewize/marin.svg)](https://packagist.org/packages/imagewize/marin)
+[![Theme Check](https://github.com/imagewize/marin/actions/workflows/theme-check.yml/badge.svg)](https://github.com/imagewize/marin/actions/workflows/theme-check.yml)
 
 </div>
 <div align="center">
@@ -19,11 +19,11 @@ A lean full-site-editing starter theme for WordPress.
 
 ## Description
 
-Aviendha is a full-site-editing (FSE) WordPress starter theme. It provides a solid design system via `theme.json` (colors, typography, spacing, layout), WooCommerce block templates, and style variations, but ships **no bundled patterns** — pages are composed directly from blocks. It is intended as a base theme to fork from, similar to Sage in the classic theming world.
+Marin is a full-site-editing (FSE) WordPress theme for **e-commerce**, built to speed up client store builds. It provides a design system via `theme.json` (colors, typography, spacing, layout), WooCommerce block templates, and style variations (including `store`), but ships **no bundled patterns** — pages are composed directly from blocks. Fork it per client, or use it as the shared base.
 
-Unlike Imagewize's [Elayne](https://github.com/imagewize/elayne) theme, Aviendha is minimal by design. It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu, carousel, FAQ tabs, and more), but doesn't require it — the theme is a plain block theme that works with core blocks and any block plugin.
+It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu, carousel, FAQ tabs, store bands, and more), but doesn't require it — the theme is a plain block theme that works with core blocks and any block plugin.
 
-> **Lineage:** Aviendha is a companion starter theme to Imagewize's [Elayne](https://github.com/imagewize/elayne) and [Nynaeve](https://github.com/imagewize/nynaeve) themes, and serves as the base for themes like [Ixian](https://github.com/imagewize/ixian). Like Elayne, it ships no custom blocks of its own — content blocks come from the shared [Aludra](https://github.com/imagewize/aludra) plugin, per WordPress.org's theme-review rules. (Nynaeve is a separate case: it registers its own blocks and doesn't use Aludra.)
+> **Lineage:** Marin is created from the [Aviendha](https://github.com/imagewize/aviendha) starter theme and focuses it on WooCommerce stores. It is a companion to Imagewize's [Elayne](https://github.com/imagewize/elayne) and [Nynaeve](https://github.com/imagewize/nynaeve) themes and replaces Elayne's store vertical for client e-commerce work. Like Elayne, it ships no custom blocks of its own — content blocks come from the shared Aludra plugin, per WordPress.org's theme-review rules.
 
 ## Requirements
 
@@ -39,32 +39,24 @@ Unlike Imagewize's [Elayne](https://github.com/imagewize/elayne) theme, Aviendha
 - **WooCommerce templates** — `templates/single-product.html`, `templates/archive-product.html`, `templates/product-search-results.html`, and `templates/coming-soon.html` are theme-provided; cart, checkout, and category-archive templates fall back to WooCommerce's own block-theme defaults. The product archive and search results ship a results count, catalog sorting, a filters sidebar (price, category, availability, rating) and an empty state; the single product template uses the block-based add to cart, with theme layouts for simple and variable products in `parts/`. The coming-soon template wraps WooCommerce's coming-soon block with the theme's header and footer.
 - **Degrades gracefully without WooCommerce** — with the plugin inactive, the store templates and the header's mini cart are filtered out rather than left to render as unsupported blocks. WooCommerce's own bundled `woocommerce-blocks/*` patterns are unregistered when it *is* active — the theme neither designed nor styles them, and they crowd out core's.
 - **Two page templates** — `page.html` (default) omits `post-title` since most pages get their title from a block's own heading; `page-with-title.html` (selectable per-page under Page → Template) adds the conventional title treatment.
-- **Style variations** — see `styles/` (e.g. `twilight.json`) for alternate color palettes on top of the same design system.
+- **Style variations** — see `styles/` (`twilight.json` — dark, rose-accented; `store.json` — warm retail palette with self-hosted Cormorant Garamond and Jost) for alternate palettes on top of the same design system.
 - **No bundled patterns** — block-first composition. Core's own patterns stay registered, so the inserter is never empty; insert `aludra/*` blocks (or core blocks) directly into pages and templates, then add your own patterns as needed.
 
-## Forking this theme
+## Building a client store
 
-Aviendha is a GitHub [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). Press **Use this template → Create a new repository**, then in the new repo run **Actions → Rename theme from template → Run workflow**. GitHub fires no workflow event when a repository is created from a template, so this one step is manual; everything after it is not.
+Marin is a GitHub [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). Press **Use this template → Create a new repository**, then run **Actions → Rename theme from template → Run workflow** in the new repo and merge the pull request it opens. It renames the `marin`/`Marin` identifiers (CSS prefixes, PHP function prefix, text domain, package names, logo filenames) to the new repository's name. If it cannot open a PR, enable **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**.
 
-The workflow opens a pull request replacing every mechanical `aviendha`/`Aviendha` identifier with your repository's name — CSS class prefixes (`aviendha-header`, `aviendha-eyebrow`, …), the PHP namespace and `aviendha_*` function prefix, the text domain, the PHPCS prefix rule, the Composer and npm package names, and the logo SVG filenames. Review the PR and merge it. It carries no CI checks: pull requests opened with the default `GITHUB_TOKEN` don't trigger workflow runs, so Theme Check and WPCS first run on the push to `main` once you merge.
+The rename skips this README, `CHANGELOG.md`, `readme.txt` and the agent guides. Finish by hand:
 
-If the run fails to open a pull request, enable **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests** in the new repository and run it again.
-
-A single-word repository name (`ixian`) maps cleanly. A hyphenated one (`blue-desert`) yields `bluedesert_setup()` and `Theme Name: BlueDesert` — valid, but fix the human-readable name in `style.css` by hand.
-
-The rename deliberately skips this README, `CHANGELOG.md`, `readme.txt` and the agent guides, which should still name Aviendha as the theme's lineage. Finish the fork by hand:
-
-- Rewrite `README.md`, `readme.txt` and `CHANGELOG.md` for the new theme, and reset the version to `1.0.0` in `style.css`, `readme.txt`, `package.json` and `CHANGELOG.md`
-- **Repoint the logo paths in those skipped files.** The workflow renames `assets/logos/aviendha-rose-*.svg` but not the references to them, so the README's header image (`<img src="assets/logos/aviendha-rose-primary.svg">`) renders broken, and the credits section of `readme.txt` — which *does* ship in the theme zip — cites paths that no longer exist.
-- Update the `style.css` header — Theme Name, Theme URI, Description, Tags
-- Replace `screenshot.png` and the rose mark in `assets/logos/` (the workflow renames those files but cannot redraw them)
-- Give the theme its own palette in `theme.json`, or add a `styles/*.json` variation
-- Add a `patterns/` directory if the fork needs one — the `@imwz/wp-pattern-sentinel` harness and the `npm run validate` scripts are already wired up for it
+- Rewrite those files, reset the version to `1.0.0`, and repoint their `assets/logos/marin-rose-*.svg` references
+- Update the `style.css` header, `screenshot.png` and the logo mark
+- Give the theme its own palette in `theme.json` or a `styles/*.json` variation (start from `store.json`)
+- Add a `patterns/` directory if needed — the `@imwz/wp-pattern-sentinel` harness is already wired up
 
 ## Structure
 
 ```
-aviendha/
+marin/
 ├── style.css          # Theme header (metadata only)
 ├── theme.json          # Design system: color, typography, spacing, layout
 ├── functions.php       # Theme setup, 'menu' template part area, WooCommerce hooks
@@ -75,12 +67,12 @@ aviendha/
 │   ├── logos/           # Rose logo mark (SVG)
 │   └── css/             # WooCommerce override stylesheet (enqueued conditionally)
 ├── docs/                # Contributor notes (not shipped in the theme zip)
-└── languages/           # Translations (text domain: aviendha)
+└── languages/           # Translations (text domain: marin)
 ```
 
 ## Theme Integration for Aludra
 
-The Aludra mega-menu block requires its host theme to register a `menu` template part area. Aviendha does this in `functions.php` via the `default_wp_template_part_areas` filter, so mega menu template parts created in the Site Editor appear under **Appearance → Editor → Patterns → Template Parts → Menus**.
+The Aludra mega-menu block requires its host theme to register a `menu` template part area. Marin does this in `functions.php` via the `default_wp_template_part_areas` filter, so mega menu template parts created in the Site Editor appear under **Appearance → Editor → Patterns → Template Parts → Menus**.
 
 ## Development
 

@@ -4,73 +4,36 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Aviendha is a lean full-site-editing (FSE) **starter theme** for WordPress, designed to be forked
-and customized — similar to Sage in the classic theming world. It is a companion to Imagewize's
-**Elayne** and **Nynaeve** themes, and serves as the base for themes like **Ixian**. Unlike Elayne,
-Aviendha is deliberately minimal: **no bundled patterns**. `theme.json`, WooCommerce block templates,
-and style variations form the design system; page content is composed directly from blocks (core
-blocks or the [Aludra](https://github.com/imagewize/aludra) block library) rather than inserted as
-pre-built patterns.
+Marin is a lean full-site-editing (FSE) **WooCommerce theme** for WordPress, created from the
+**Aviendha** starter (GitHub template repository) to speed up building e-commerce themes for clients.
+It is a companion to Imagewize's **Elayne** and **Nynaeve** themes and is meant to replace Elayne's
+store vertical for client store work. Like Aviendha it is deliberately minimal: **no bundled
+patterns**. `theme.json`, WooCommerce block templates, and style variations (`styles/store.json`
+is the retail palette) form the design system; page content is composed directly from blocks (core
+blocks or the [Aludra](https://github.com/imagewize/aludra) block library).
 
 **Requirements:**
 - WordPress 6.6+
 - PHP 8.0+
-- WooCommerce (optional, for store templates)
+- WooCommerce (the point of the theme; templates degrade gracefully without it)
 - Aludra plugin — recommended, not required
 
-## Why no patterns
+## Lineage and upstream
 
-Elayne and Nynaeve both ship large pattern libraries. Aviendha intentionally does not, because:
+Marin was created from `imagewize/aviendha` on 2026-10-04 via **Use this template** plus
+`.github/workflows/template-rename.yml` (run from the Actions tab; `persist-credentials: false` on
+checkout was added here because the rename action's push otherwise fails with a duplicate
+`Authorization` header). Aviendha stays the neutral starter; improvements that are not store-specific
+(theme.json fixes, template bugs, grid rules) belong upstream there too — port them by hand.
 
-1. Blocks (not patterns) are where the reusable logic should live — see Aludra's `aludra/*` blocks
-   (mega menu, carousel, FAQ tabs, etc.). Patterns become one-liners around those blocks rather than
-   theme-maintained markup walls.
-2. It keeps this theme's surface area small: no per-vertical pattern sets to maintain.
+**Why no patterns:** reusable logic lives in Aludra's `aludra/*` blocks, which keeps this theme's
+surface area small. Prefer a **style variation** (`styles/*.json`) over a pattern library for new
+looks. The pattern-validation harness (`@imwz/wp-pattern-sentinel`, `npm run validate`) is wired up
+for any `patterns/` directory a client fork adds — see [Pattern validation](#pattern-validation).
 
-If Aviendha ever needs vertical-specific starting content (e.g. a "cycling" flavor), prefer a
-**style variation** (`styles/*.json`) over a pattern library — same design system, different palette.
-
-**The pattern-validation harness ships anyway.** Aviendha is a starter theme — forks like **Ixian**
-add their own `patterns/` directory the moment they diverge from "no patterns," and re-wiring
-`wp-pattern-sentinel` from scratch in every fork is the kind of drift this repo exists to prevent.
-`package.json` carries the `@imwz/wp-pattern-sentinel` dependency and `validate*` scripts (see
-[Pattern validation](#pattern-validation) under Development) so a fork gets a working `npm run
-validate` the moment it adds a `patterns/` directory, without having to remember to set it up.
-
-## Forking Aviendha
-
-This repo is a GitHub **template repository**, and `.github/workflows/template-rename.yml` does the
-mechanical half of a fork: it runs `kota65535/github-template-rename-action`, which replaces every
-`aviendha`/`Aviendha` identifier with the new repository's name and renames the files carrying it.
-Ixian predates the workflow — its "Initial commit" is that rename done by hand.
-
-**It is `workflow_dispatch`, and that is not an oversight.** GitHub fires no workflow event when a
-repository is created from a template, so nothing can run automatically at creation time; a fork
-runs it once from its own Actions tab. `repository_created` is not a real Actions event — a
-workflow declaring it is simply never triggered.
-
-Two constraints shape `paths-ignore`, and neither should be relaxed casually:
-
-- **`.github/**` is excluded** so the default `GITHUB_TOKEN` suffices. Pushing changes to workflow
-  files requires a PAT with the `workflow` scope, which every fork would then have to provision —
-  a steep price for the single `aviendha` string in `theme-check.yml`.
-- **`README.md`, `CHANGELOG.md`, `readme.txt`, `AGENTS.md` and this file are excluded** because a
-  fork should still name Aviendha as its lineage, the way Ixian's do. Renaming them would rewrite
-  Aviendha's changelog history as though it were the fork's.
-
-`.distignore` and `.gitattributes` are deliberately *not* excluded — their `docs/aviendha/`
-comments should become `docs/<fork>/`.
-
-**Known gap: the rename moves `assets/logos/aviendha-rose-*.svg` but not the references to them,**
-which live in the excluded files. A fresh fork therefore has a broken README header image and a
-`readme.txt` credits section citing paths that no longer exist — and `readme.txt` ships in the zip.
-The README's fork checklist calls this out; keep the two in step if the workflow changes.
-
-Verified end to end on 2026-09-04 against a throwaway `imagewize/moiraine` created from this
-template: 27 files renamed, and the resulting tree passes PHP lint and PHPCS. That last part is the
-check worth repeating after any change here, because `phpcs.xml`'s prefix rule and the `aviendha_*`
-function names have to move together or the fork fails its own CI. Note that the rename PR itself
-carries no checks — pull requests opened with `GITHUB_TOKEN` do not trigger workflow runs.
+The workflow's `paths-ignore` skips `.github/**`, README/CHANGELOG/readme.txt/agent guides,
+`composer.lock`, `vendor/**` and PNGs. The rename moves `assets/logos/marin-rose-*.svg` but not the
+references to them in the skipped files; forks of Marin must repoint those by hand.
 
 ## Architecture
 
@@ -92,7 +55,7 @@ Real block markup — not pattern references. Includes core templates (`index`, 
 - `single-product.html` — product gallery, title, price, add-to-cart, details, related products
 - `archive-product.html` — product grid via `woocommerce/product-collection`
 
-**`page.html` (default) omits `post-title`.** Most Aviendha pages are composed directly from blocks
+**`page.html` (default) omits `post-title`.** Most Marin pages are composed directly from blocks
 (or Aludra blocks) whose own heading already serves as the page's title — e.g. `aludra/hero-split`'s
 `<h1>`. Auto-printing `post-title` above that would duplicate it. Use **`page-with-title.html`** (a
 custom template, selectable per-page under Page → Template in the editor) for standard content pages
@@ -113,7 +76,7 @@ The Aludra mega-menu block requires its host theme to register a `menu` template
 `functions.php` does this via the `default_wp_template_part_areas` filter. This makes mega menu
 template parts (created by users in the Site Editor) appear under
 **Appearance → Editor → Patterns → Template Parts → Menus**. Content for those template parts lives
-in the database, not in this theme — Aviendha ships no menu template part files, matching the
+in the database, not in this theme — Marin ships no menu template part files, matching the
 "no patterns" rule above.
 
 ### Style variations (`styles/`)
@@ -141,7 +104,7 @@ Project-specific code review rules (for the `/code-review` skill or Vibe) live i
 
 ### Pattern validation
 
-Aviendha ships no patterns itself (see "Why no patterns" above), but carries the
+Marin ships no patterns itself (see "Why no patterns" above), but carries the
 `@imwz/wp-pattern-sentinel` harness in `package.json` for forks that add a `patterns/` directory.
 `wp pattern validate`'s PHP `parse_blocks()` pass does **not** run Gutenberg's JavaScript `save()`
 function — issues only the JS serializer produces (class-ordering, attribute defaults like a
@@ -156,20 +119,20 @@ the WordPress instance patterns are actually exercised against:
 npm install
 npm run setup            # npx playwright install chromium, once
 
-# from the theme directory (~/code/aviendha, or the fork's working copy)
+# from the theme directory (~/code/marin, or the fork's working copy)
 sentinel --trellis --trellis-dir=$HOME/code/imagewize.com/trellis \
-  --site=demo.imagewize.com --subsite=aviendha patterns/my-pattern.php   # single file
+  --site=demo.imagewize.com --subsite=marin patterns/my-pattern.php   # single file
 
 sentinel --trellis --trellis-dir=$HOME/code/imagewize.com/trellis \
-  --site=demo.imagewize.com --subsite=aviendha patterns/                # everything
+  --site=demo.imagewize.com --subsite=marin patterns/                # everything
 ```
 
-Swap `--subsite=aviendha` for the fork's own subsite slug (e.g. `--subsite=ixian`).
+Swap `--subsite=marin` for the fork's own subsite slug (e.g. `--subsite=ixian`).
 
 ### Where docs and design mockups live
 
 **Not in this repo.** Planning documents, roadmaps and HTML design mockups belong in the
-`imagewize/imagewize.com` repo, under `docs/aviendha/` and `designs/aviendha/` — the same
+`imagewize/imagewize.com` repo, under `docs/marin/` and `designs/marin/` — the same
 per-project layout Aludra, Elayne and Nynaeve use. Elayne and Nynaeve ship no `docs/` or `designs/`
 directory at all; keep it that way here.
 
@@ -182,7 +145,7 @@ relative to that clone.
 
 Two reasons, beyond consistency: this repo is public and distributable, so mockups carrying client
 names and roadmaps of unshipped work do not belong in it; and a second copy of a design file drifts
-from the first (`aviendha-redesign.html` was already duplicated in both repos before this rule).
+from the first (`marin-redesign.html` was already duplicated in both repos before this rule).
 
 Durable rationale for a change belongs in the commit message and in code comments, not in a
 document — that is what makes the split cost nothing. `.distignore` and `.gitattributes` still
@@ -190,8 +153,8 @@ carry `docs/` and `designs/` entries as a guard, so a stray file never reaches a
 
 ### Testing on the demo site
 
-Aviendha is exercised on the `/aviendha/` subsite of the local Trellis/Bedrock multisite at
-`~/code/imagewize.com/demo` (`http://demo.imagewize.test/aviendha/`), alongside the
+Marin is exercised on the `/marin/` subsite of the local Trellis/Bedrock multisite at
+`~/code/imagewize.com/demo` (`http://demo.imagewize.test/marin/`), alongside the
 [Aludra](https://github.com/imagewize/aludra) block library the content is composed from.
 
 Both are pinned Composer dependencies there, **not** symlinks to these working copies. Do not cut
@@ -201,13 +164,13 @@ once if `wp-ops` isn't on your PATH yet):
 
 ```bash
 SITE_ROOT=~/code/imagewize.com/demo/web/app \
-  wp-ops rsync-package-to-site theme aviendha ~/code/aviendha
+  wp-ops rsync-package-to-site theme marin ~/code/marin
 ```
 
-**Always pass the theme working copy (`~/code/aviendha`) as the explicit source argument, and do
+**Always pass the theme working copy (`~/code/marin`) as the explicit source argument, and do
 not `cd` into the demo site to run this.** When the source argument is omitted the script defaults
 it to `$PWD` — so running this from inside the demo site rsyncs the entire Bedrock site *into*
-`themes/aviendha/`, and because the sync uses `--delete --delete-excluded`, it wipes the real
+`themes/marin/`, and because the sync uses `--delete --delete-excluded`, it wipes the real
 theme. Preview with `--dry-run` (before the `theme` argument) when unsure; if the output shows it
 deleting WordPress core (`web/wp/...`) or Bedrock files (`.env`, `config/`), the source argument is
 wrong — stop.
@@ -225,7 +188,7 @@ Run one-off WP-CLI commands against it with:
 
 ```bash
 cd ~/code/imagewize.com/trellis
-trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp <command> --url=demo.imagewize.test/aviendha/
+trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp <command> --url=demo.imagewize.test/marin/
 ```
 
 ### CI
@@ -260,7 +223,7 @@ When updating the theme version, update **four files** in sync:
 site; the other three keep the repo, the WP.org listing and the release tooling honest. Check all
 four before tagging.
 
-**License:** Aviendha uses the GNU GPL v3 (or later) (see `LICENSE.md`), matching Aludra, Elayne and Ixian.
+**License:** Marin uses the GNU GPL v3 (or later) (see `LICENSE.md`), matching Aludra, Elayne and Ixian.
 
 ## Git Commit Guidelines
 
@@ -286,4 +249,4 @@ one large commit bundling unrelated changes. Makes history easier to review and 
 - `styles/*.json` — style variations
 - `assets/logos/` — rose logo mark (SVG, adapted from Lucide, ISC License)
 - `composer.json` / `phpcs.xml` — PHP lint/coding-standards tooling
-- `.github/workflows/template-rename.yml` — the fork rename (see [Forking Aviendha](#forking-aviendha))
+- `.github/workflows/template-rename.yml` — the fork rename (see [Forking Marin](#forking-marin))
