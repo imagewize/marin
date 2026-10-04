@@ -4,7 +4,7 @@
  * Slug: marin/home-store
  * Categories: featured
  * Block Types: core/post-content
- * Description: A skincare store front page built from Aludra blocks: hero, trust bar, category cards, newest products, brand story, stats, reviews and a closing call to action. Registered only when Aludra and WooCommerce are active. *
+ * Description: A skincare store front page built from Aludra blocks: hero, trust bar, category cards, newest products, brand story, stats, reviews and a closing call to action. Registered only when Aludra and WooCommerce are active.
  *
  * @package Marin
  */
@@ -63,8 +63,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- wp:aludra/trust-bar -->
 <div class="wp-block-aludra-trust-bar alignfull"><div class="trust-bar__inner"><!-- wp:group {"className":"trust-bar__items","style":{"spacing":{"blockGap":"32px"}},"layout":{"type":"flex","flexWrap":"wrap","alignItems":"center","justifyContent":"center"}} -->
 <div class="wp-block-group trust-bar__items"><!-- wp:group {"className":"trust-item","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
-<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-clock.svg"}}}}} -->
-<figure class="wp-block-image size-full"><img src="" alt=""/></figure>
+<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/icons/truck.svg' ) ); ?>" alt=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
@@ -73,8 +73,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"trust-item","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
-<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-users.svg"}}}}} -->
-<figure class="wp-block-image size-full"><img src="" alt=""/></figure>
+<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/icons/returns.svg' ) ); ?>" alt=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
@@ -83,8 +83,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"trust-item","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
-<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-performance.svg"}}}}} -->
-<figure class="wp-block-image size-full"><img src="" alt=""/></figure>
+<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/icons/leaf.svg' ) ); ?>" alt=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
@@ -93,8 +93,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"trust-item","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
-<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-bar-chart.svg"}}}}} -->
-<figure class="wp-block-image size-full"><img src="" alt=""/></figure>
+<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/icons/lock.svg' ) ); ?>" alt=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
