@@ -22,7 +22,7 @@ A lean full-site-editing WooCommerce theme for client e-commerce stores.
 
 ## Description
 
-Marin is a full-site-editing (FSE) WordPress theme for **e-commerce**, built to speed up client store builds. It provides a design system via `theme.json` (colors, typography, spacing, layout), WooCommerce block templates, and style variations (including `store`), and a single **Store Home** page pattern, but no pattern library — other pages are composed directly from blocks. Fork it per client, or use it as the shared base.
+Marin is a full-site-editing (FSE) WordPress theme for **e-commerce**, built to speed up client store builds. It provides a design system via `theme.json` (colors, typography, spacing, layout), WooCommerce block templates, and three style variations (`store`, `skincare` and `twilight`), and a single **Store Home** page pattern, but no pattern library — other pages are composed directly from blocks. Fork it per client, or use it as the shared base.
 
 It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu, carousel, FAQ tabs, store bands, and more), but doesn't require it — the theme is a plain block theme that works with core blocks and any block plugin.
 
@@ -42,7 +42,7 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 - **WooCommerce templates** — `templates/single-product.html`, `templates/archive-product.html`, `templates/product-search-results.html`, and `templates/coming-soon.html` are theme-provided; cart, checkout, and category-archive templates fall back to WooCommerce's own block-theme defaults. The product archive and search results ship a results count, catalog sorting, a filters sidebar (price, category, availability, rating) and an empty state; the single product template uses the block-based add to cart, with theme layouts for simple and variable products in `parts/`. The coming-soon template wraps WooCommerce's coming-soon block with the theme's header and footer.
 - **Degrades gracefully without WooCommerce** — with the plugin inactive, the store templates and the header's mini cart are filtered out rather than left to render as unsupported blocks. WooCommerce's own bundled `woocommerce-blocks/*` patterns are unregistered when it *is* active — the theme neither designed nor styles them, and they crowd out core's.
 - **Two page templates** — `page.html` (default) omits `post-title` since most pages get their title from a block's own heading; `page-with-title.html` (selectable per-page under Page → Template) adds the conventional title treatment.
-- **Style variations** — see `styles/` (`twilight.json` — dark, rose-accented; `store.json` — warm retail palette with self-hosted Cormorant Garamond and Jost; `skincare.json` — calm sage and cream palette with the same fonts) for alternate palettes on top of the same design system.
+- **Style variations** — see `styles/` (`twilight.json` — dark, rose-accented; `store.json` — warm retail palette with self-hosted Cormorant Garamond and Jost; `skincare.json` — calm sage and cream palette with the same fonts) for alternate palettes on top of the same design system. Switch between them under **Appearance → Editor → Styles → Browse styles**.
 - **One page pattern, no library** — `marin/home-store` (**Store Home**) is a front page built from Aludra blocks and a WooCommerce product grid: hero, trust bar, category cards, newest products, story, stats, reviews and a closing call to action. It is registered only when WooCommerce is active **and** the Aludra plugin is installed — without Aludra it is hidden rather than inserting unsupported blocks. Everything else is block-first composition: core's own patterns stay registered, so the inserter is never empty; insert `aludra/*` blocks (or core blocks) directly into pages and templates, then add your own patterns as needed.
 
 ## Installation
@@ -57,7 +57,7 @@ The package type is `wordpress-theme`, so it needs `composer/installers` on the 
 
 ## Demo content
 
-[imagewize/marin-demo-content](https://github.com/imagewize/marin-demo-content) is a WP-CLI seeder that fills a WooCommerce store with 16 skincare products (categories, variable products, sale prices and placeholder packshots), so you can see the templates and the `store` style variation with real data:
+[imagewize/marin-demo-content](https://github.com/imagewize/marin-demo-content) is a WP-CLI seeder that fills a WooCommerce store with 16 skincare products (categories, variable products, sale prices and placeholder packshots), so you can see the templates and the `skincare` style variation with real data:
 
 ```bash
 git clone https://github.com/imagewize/marin-demo-content.git
