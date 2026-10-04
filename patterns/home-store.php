@@ -228,6 +228,88 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:woocommerce/product-collection --></div>
 <!-- /wp:group -->
 
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"96px","bottom":"72px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"48px"}},"backgroundColor":"primary-alt","textColor":"base","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
+<div class="wp-block-group alignfull has-base-color has-primary-alt-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:96px;padding-right:24px;padding-bottom:72px;padding-left:24px"><!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"sand-deep","fontSize":"small"} -->
+<p class="has-sand-deep-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">The routine</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textColor":"base"} -->
+<h2 class="wp-block-heading has-base-color has-text-color">Cleanse, treat, <em>moisturise</em></h2>
+<!-- /wp:heading --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"blockGap":"32px"}},"layout":{"type":"grid","minimumColumnWidth":"16rem"}} -->
+<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"padding":{"top":"24px"},"blockGap":"12px"},"border":{"top":{"color":"var:preset|color|primary-accent","width":"1px"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--primary-accent);border-top-width:1px;padding-top:24px"><!-- wp:paragraph {"style":{"typography":{"lineHeight":"1"}},"textColor":"sand-deep","fontSize":"display","fontFamily":"display"} -->
+<p class="has-sand-deep-color has-text-color has-display-font-family has-display-font-size" style="line-height:1">01</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"textColor":"base","fontSize":"x-large"} -->
+<h3 class="wp-block-heading has-base-color has-text-color has-x-large-font-size">Cleanse</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"primary-accent"} -->
+<p class="has-primary-accent-color has-text-color">Gentle formulas that clean without the tight, dry feeling.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small"} -->
+<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'cleansers' ) ); ?>">Shop cleansers →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"24px"},"blockGap":"12px"},"border":{"top":{"color":"var:preset|color|primary-accent","width":"1px"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--primary-accent);border-top-width:1px;padding-top:24px"><!-- wp:paragraph {"style":{"typography":{"lineHeight":"1"}},"textColor":"sand-deep","fontSize":"display","fontFamily":"display"} -->
+<p class="has-sand-deep-color has-text-color has-display-font-family has-display-font-size" style="line-height:1">02</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"textColor":"base","fontSize":"x-large"} -->
+<h3 class="wp-block-heading has-base-color has-text-color has-x-large-font-size">Treat</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"primary-accent"} -->
+<p class="has-primary-accent-color has-text-color">Toners and serums that refine, brighten and balance.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small"} -->
+<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'serums' ) ); ?>">Shop serums →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"24px"},"blockGap":"12px"},"border":{"top":{"color":"var:preset|color|primary-accent","width":"1px"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--primary-accent);border-top-width:1px;padding-top:24px"><!-- wp:paragraph {"style":{"typography":{"lineHeight":"1"}},"textColor":"sand-deep","fontSize":"display","fontFamily":"display"} -->
+<p class="has-sand-deep-color has-text-color has-display-font-family has-display-font-size" style="line-height:1">03</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"textColor":"base","fontSize":"x-large"} -->
+<h3 class="wp-block-heading has-base-color has-text-color has-x-large-font-size">Moisturise</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"primary-accent"} -->
+<p class="has-primary-accent-color has-text-color">Lightweight daily hydration with ceramides and squalane.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small"} -->
+<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'moisturisers' ) ); ?>">Shop moisturisers →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:aludra/stat-rail -->
+<div class="wp-block-aludra-stat-rail alignfull" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"3 steps","caption":"To a complete routine","good":true} -->
+<div class="wp-block-aludra-stat-item stat-rail__item is-good"><div class="stat-rail__num">3 steps</div><div class="stat-rail__cap">To a complete routine</div></div>
+<!-- /wp:aludra/stat-item -->
+
+<!-- wp:aludra/stat-item {"number":"16","caption":"Products in the range"} -->
+<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">16</div><div class="stat-rail__cap">Products in the range</div></div>
+<!-- /wp:aludra/stat-item -->
+
+<!-- wp:aludra/stat-item {"number":"30 days","caption":"Free returns"} -->
+<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">30 days</div><div class="stat-rail__cap">Free returns</div></div>
+<!-- /wp:aludra/stat-item --></div></div>
+<!-- /wp:aludra/stat-rail -->
+
 <!-- wp:aludra/split-section {"revealOnScroll":true} -->
 <div class="wp-block-aludra-split-section alignfull" data-aludra-reveal="true" style="margin-top:0;margin-bottom:0"><div class="split-section__shell"><div class="split-section__header"><p class="split-section__label">Our story</p><h2 class="split-section__heading">Made <em>simple</em></h2><p class="split-section__lead">Every formula starts with a question: what does skin actually need?</p></div><div class="split-section__panes"><!-- wp:group {"className":"split-section__media"} -->
 <div class="wp-block-group split-section__media"><!-- wp:cover {"overlayColor":"primary","isUserOverlayColor":true,"minHeight":420,"minHeightUnit":"px","contentPosition":"bottom left","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}},"layout":{"type":"constrained"}} -->
@@ -253,20 +335,6 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div></div></div>
 <!-- /wp:aludra/split-section -->
-
-<!-- wp:aludra/stat-rail -->
-<div class="wp-block-aludra-stat-rail alignfull" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"3 steps","caption":"To a complete routine","good":true} -->
-<div class="wp-block-aludra-stat-item stat-rail__item is-good"><div class="stat-rail__num">3 steps</div><div class="stat-rail__cap">To a complete routine</div></div>
-<!-- /wp:aludra/stat-item -->
-
-<!-- wp:aludra/stat-item {"number":"16","caption":"Products in the range"} -->
-<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">16</div><div class="stat-rail__cap">Products in the range</div></div>
-<!-- /wp:aludra/stat-item -->
-
-<!-- wp:aludra/stat-item {"number":"30 days","caption":"Free returns"} -->
-<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">30 days</div><div class="stat-rail__cap">Free returns</div></div>
-<!-- /wp:aludra/stat-item --></div></div>
-<!-- /wp:aludra/stat-rail -->
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"48px"}},"backgroundColor":"tertiary","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:heading {"textAlign":"center","textColor":"contrast"} -->
