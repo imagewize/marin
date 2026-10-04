@@ -3,6 +3,14 @@
 All notable changes to Marin are documented in this file. Marin was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.0.2] - 2026-10-04
+
+### Changed
+- Positioned Marin as a WooCommerce e-commerce theme rather than a generic starter: `composer.json`
+  and `package.json` descriptions, the `package.json` keywords (`woocommerce`, `e-commerce` replace
+  `starter-theme`), the README tagline, feature list and WooCommerce requirement, and the opening
+  line of `.agents/code-review.md`.
+
 ## [1.0.1] - 2026-10-04
 
 ### Changed
