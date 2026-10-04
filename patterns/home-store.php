@@ -110,8 +110,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <p class="has-primary-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Shop by category</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"textColor":"contrast"} -->
-<h2 class="wp-block-heading has-contrast-color has-text-color">Find your <em>routine</em></h2>
+<!-- wp:heading {"textColor":"contrast","fontSize":"xx-large"} -->
+<h2 class="wp-block-heading has-contrast-color has-text-color has-xx-large-font-size">Find your <em>routine</em></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -189,8 +189,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <p class="has-primary-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Best sellers</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"textColor":"contrast"} -->
-<h2 class="wp-block-heading has-contrast-color has-text-color">Bestsellers <em>to try first</em></h2>
+<!-- wp:heading {"textColor":"contrast","fontSize":"xx-large"} -->
+<h2 class="wp-block-heading has-contrast-color has-text-color has-xx-large-font-size">Bestsellers <em>to try first</em></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -209,14 +209,14 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 
 <!-- wp:post-terms {"term":"product_cat","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"secondary","fontSize":"x-small"} /-->
 
-<!-- wp:post-title {"level":3,"isLink":true,"fontSize":"large","fontFamily":"display"} /-->
+<!-- wp:post-title {"level":3,"isLink":true,"style":{"spacing":{"padding":{"left":"0","right":"0"}}},"fontSize":"large","fontFamily":"display"} /-->
 
 <!-- wp:woocommerce/product-summary {"isDescendentOfQueryLoop":true,"summaryLength":14,"textColor":"secondary","fontSize":"small"} /-->
 
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
-<div class="wp-block-group"><!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"textAlign":"left","fontSize":"medium"} /-->
+<div class="wp-block-group"><!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"textAlign":"left","style":{"spacing":{"padding":{"left":"0","right":"0"}}},"fontSize":"medium"} /-->
 
-<!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true,"textAlign":"left","fontSize":"small","className":"is-style-outline"} /--></div>
+<!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true,"textAlign":"left","style":{"spacing":{"padding":{"left":"1.25rem","right":"1.25rem","top":"0.5rem","bottom":"0.5rem"}}},"fontSize":"small","className":"is-style-outline"} /--></div>
 <!-- /wp:group -->
 <!-- /wp:woocommerce/product-template -->
 
@@ -234,12 +234,12 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <p class="has-sand-deep-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">The routine</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"textColor":"base"} -->
-<h2 class="wp-block-heading has-base-color has-text-color">Cleanse, treat, <em>moisturise</em></h2>
+<!-- wp:heading {"textColor":"base","fontSize":"xx-large"} -->
+<h2 class="wp-block-heading has-base-color has-text-color has-xx-large-font-size">Cleanse, treat, <em>moisturise</em></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"32px"}},"layout":{"type":"grid","minimumColumnWidth":"16rem"}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"32px"}},"layout":{"type":"grid","minimumColumnWidth":"20rem"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"padding":{"top":"24px"},"blockGap":"12px"},"border":{"top":{"color":"var:preset|color|primary-accent","width":"1px"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="border-top-color:var(--wp--preset--color--primary-accent);border-top-width:1px;padding-top:24px"><!-- wp:paragraph {"style":{"typography":{"lineHeight":"1"}},"textColor":"sand-deep","fontSize":"display","fontFamily":"display"} -->
 <p class="has-sand-deep-color has-text-color has-display-font-family has-display-font-size" style="line-height:1">01</p>
@@ -319,8 +319,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:cover --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"split-section__content","style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"},"blockGap":"1.25rem"},"border":{"radius":"12px"}},"backgroundColor":"main","textColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group split-section__content has-base-color has-main-background-color has-text-color has-background" style="border-radius:12px;padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem"><!-- wp:paragraph -->
+<!-- wp:group {"className":"split-section__content","style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"},"blockGap":"1.25rem"},"border":{"radius":"12px"}},"textColor":"secondary","layout":{"type":"constrained"}} -->
+<div class="wp-block-group split-section__content has-secondary-color has-text-color" style="border-radius:12px;padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem"><!-- wp:paragraph -->
 <p>We started with a short list: ingredients we can explain, formulas that are gentle enough for daily use, and nothing in the box you would not keep.</p>
 <!-- /wp:paragraph -->
 
@@ -329,16 +329,16 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"base","textColor":"main","className":"is-style-fill"} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-main-color has-base-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( $shop_url ); ?>">Shop the range</a></div>
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $shop_url ); ?>">Shop the range</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div></div></div>
 <!-- /wp:aludra/split-section -->
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"48px"}},"backgroundColor":"tertiary","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
-<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"textColor":"contrast"} -->
-<h2 class="wp-block-heading has-text-align-center has-contrast-color has-text-color">Loved by our <em>customers</em></h2>
+<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"textColor":"contrast","fontSize":"xx-large"} -->
+<h2 class="wp-block-heading has-text-align-center has-contrast-color has-text-color has-xx-large-font-size">Loved by our <em>customers</em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"20px"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
