@@ -3,6 +3,20 @@
 All notable changes to Marin are documented in this file. Marin was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.2.0] - 2026-10-04
+
+### Added
+- `patterns/home-store.php` (`marin/home-store`, **Store Home**): a store front page built from Aludra
+  blocks and a WooCommerce product grid — hero, trust bar, category cards, newest products, story,
+  stats, reviews and a closing call to action. Skincare copy; the shop, category and kit links are
+  resolved at render time. Validated with `sentinel` against the demo install.
+- `marin_maybe_unregister_store_home_pattern()` registers the pattern only when WooCommerce is active
+  and Aludra's blocks are registered, so it is never offered where it would insert unsupported blocks.
+
+### Changed
+- Docs (README, `readme.txt`, `CLAUDE.md`, `AGENTS.md`, `.agents/code-review.md`) now describe Marin as
+  shipping one page pattern rather than none, and say the pattern needs Aludra.
+
 ## [1.1.0] - 2026-10-04
 
 ### Added
