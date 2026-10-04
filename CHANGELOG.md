@@ -3,6 +3,11 @@
 All notable changes to Marin are documented in this file. Marin was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.0.3] - 2026-10-04
+
+### Fixed
+- `package-lock.json` carried Aviendha's `1.18.3` as its root version; it now matches `package.json`.
+
 ## [1.0.2] - 2026-10-04
 
 ### Changed
