@@ -22,22 +22,23 @@ $cat_url  = static function ( $slug ) use ( $shop_url ) {
 $kit      = get_page_by_path( 'essentials-kit', OBJECT, 'product' );
 $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 ?>
-<!-- wp:aludra/hero-split {"className":"is-style-night"} -->
-<div class="wp-block-aludra-hero-split alignfull is-style-night" style="margin-top:0;margin-bottom:0"><div class="hero-split__inner"><!-- wp:group {"className":"hero-split__content","layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group hero-split__content"><!-- wp:paragraph {"className":"hero-split__eyebrow"} -->
-<p class="hero-split__eyebrow">New: the Essentials Kit</p>
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"72px","bottom":"88px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
+<div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:72px;padding-right:24px;padding-bottom:88px;padding-left:24px"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"48px","left":"56px"}}}} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"52%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:52%"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.16em","fontWeight":"500"},"spacing":{"margin":{"bottom":"24px"}}},"textColor":"accent","fontSize":"small"} -->
+<p class="has-accent-color has-text-color has-small-font-size" style="margin-bottom:24px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase">New: the Essentials Kit</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":1,"className":"hero-split__title","style":{"typography":{"lineHeight":"1.15"}}} -->
-<h1 class="wp-block-heading hero-split__title" style="line-height:1.15">Skincare, <em>made simple</em></h1>
+<!-- wp:heading {"level":1,"style":{"typography":{"lineHeight":"1","fontWeight":"500"}},"textColor":"contrast","fontSize":"display"} -->
+<h1 class="wp-block-heading has-contrast-color has-text-color has-display-font-size" style="font-weight:500;line-height:1">Skincare, <em><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-color">made simple</mark></em></h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"hero-split__lead"} -->
-<p class="hero-split__lead">Gentle, effective formulas for a three-step routine you will actually keep. Cleanse, treat, moisturise.</p>
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"28px"}}},"textColor":"secondary","fontSize":"medium"} -->
+<p class="has-secondary-color has-text-color has-medium-font-size" style="margin-top:28px">Gentle, effective formulas for a three-step routine you will actually keep. Cleanse, treat, moisturise.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:buttons {"className":"hero-split__ctas","layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-buttons hero-split__ctas"><!-- wp:button -->
+<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"36px"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-buttons" style="margin-top:36px"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $shop_url ); ?>">Shop all products</a></div>
 <!-- /wp:button -->
 
@@ -46,19 +47,30 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
-<!-- wp:paragraph {"className":"hero-split__trust"} -->
-<p class="hero-split__trust"><span class="hero-split__check">✓</span> Free shipping over $50&nbsp;&nbsp;·&nbsp;&nbsp;<span class="hero-split__check">✓</span> 30-day returns</p>
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"32px"}}},"textColor":"secondary","fontSize":"small"} -->
+<p class="has-secondary-color has-text-color has-small-font-size" style="margin-top:32px">✓ Free shipping over $50&nbsp;&nbsp;&nbsp;✓ 30-day returns</p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:group -->
+<!-- /wp:column -->
 
-<!-- wp:group {"className":"hero-split__media"} -->
-<div class="wp-block-group hero-split__media"><!-- wp:cover {"overlayColor":"primary","isUserOverlayColor":true,"minHeight":480,"minHeightUnit":"px","contentPosition":"bottom left","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="border-radius:12px;padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px;min-height:480px"><span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Small batches, made with care</p>
-<!-- /wp:paragraph --></div></div>
-<!-- /wp:cover --></div>
+<!-- wp:column {"verticalAlignment":"center","width":"48%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:48%"><!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/hero.svg' ) ); ?>","dimRatio":0,"isUserOverlayColor":false,"minHeight":680,"minHeightUnit":"px","contentPosition":"top left","style":{"border":{"radius":"20px"},"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-cover has-custom-content-position is-position-top-left" style="border-radius:20px;padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px;min-height:680px"><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/hero.svg' ) ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"padding":{"top":"14px","right":"18px","bottom":"14px","left":"18px"},"blockGap":"2px"},"border":{"radius":"12px"}},"backgroundColor":"base","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
+<div class="wp-block-group has-contrast-color has-base-background-color has-text-color has-background" style="border-radius:12px;padding-top:14px;padding-right:18px;padding-bottom:14px;padding-left:18px"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.16em"}},"textColor":"accent","fontSize":"xx-small"} -->
+<p class="has-accent-color has-text-color has-xx-small-font-size" style="letter-spacing:0.16em;text-transform:uppercase">Sale</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"textColor":"contrast","fontSize":"large","fontFamily":"display"} -->
+<p class="has-contrast-color has-text-color has-link-color has-display-font-family has-large-font-size" style="font-weight:600"><a href="<?php echo esc_url( $kit_url ); ?>">The Essentials Kit</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size"><strong>$68.00</strong> <s>$79.00</s></p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group --></div></div>
-<!-- /wp:aludra/hero-split -->
+<!-- /wp:cover --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
 
 <!-- wp:aludra/trust-bar -->
 <div class="wp-block-aludra-trust-bar alignfull"><div class="trust-bar__inner"><!-- wp:group {"className":"trust-bar__items","style":{"spacing":{"blockGap":"32px"}},"layout":{"type":"flex","flexWrap":"wrap","alignItems":"center","justifyContent":"center"}} -->
