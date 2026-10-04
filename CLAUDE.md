@@ -223,6 +223,13 @@ When updating the theme version, update **four files** in sync:
 site; the other three keep the repo, the WP.org listing and the release tooling honest. Check all
 four before tagging.
 
+**Lockfiles are not part of the checklist.** `composer.lock` never records the theme's own
+version (`composer.json` has no `version` field; the lock holds only dependency versions and a
+content hash), so a version bump never touches it. `package-lock.json` copies the root `name` and
+`version` from `package.json` and npm refreshes them on the next `npm install`; it once drifted at
+Aviendha's `1.18.3` because the theme has no JS build and nobody runs npm often. Nothing reads that
+value — if you notice drift, fix it by hand or run `npm install`, but it does not block a release.
+
 **License:** Marin uses the GNU GPL v3 (or later) (see `LICENSE.md`), matching Aludra, Elayne and Ixian.
 
 ## Git Commit Guidelines
